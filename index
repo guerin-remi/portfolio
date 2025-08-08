@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prénom Nom · Chef de projet technique</title>
+
+  <!-- ====== mini-CSS (mobile-first) ====== -->
+  <style>
+    :root { --accent:#2D9CDB; --bg:#fff; --txt:#333; --light:#666; }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,Arial;}
+    body{background:var(--bg);color:var(--txt);line-height:1.6;padding:2rem 1rem;max-width:900px;margin:auto;}
+    h1{font-size:2rem;margin-bottom:1rem;color:var(--accent);}
+    h2{font-size:1.2rem;margin:2rem 0 .5rem;}
+    a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;}
+    a:hover{border-color:var(--accent);}
+    .card{border:1px solid #eee;border-radius:10px;padding:1rem;margin-top:1rem;display:flex;flex-direction:column;gap:.8rem;}
+    .card img{max-width:100%;border-radius:6px;}
+    footer{margin-top:3rem;font-size:.9rem;color:var(--light);}
+  </style>
+</head>
+
+<body>
+  <!-- ====== HERO ====== -->
+  <header>
+    <h1>Prénom Nom</h1>
+    <p>👋 Chef de projet technique • Python & JavaScript hobbyist</p>
+    <p>Je conçois, pilote et… je code aussi quand un problème me pique la curiosité.</p>
+  </header>
+
+  <!-- ====== PROJETS ====== -->
+  <section id="projects">
+    <h2>Projets personnels</h2>
+
+    <!-- Projet Python -->
+    <article class="card">
+      <h3>🗂️ Import Validator (Python)</h3>
+      <p>Script CLI qui <strong>valide et nettoie</strong> des fichiers Excel d’import utilisateurs : détection des
+         colonnes manquantes, auto-formatage, rapport HTML.</p>
+      <img src="assets/python-app.png" alt="Capture Import Validator">
+      <p><em>Stack :</em> Python 3 · Pandas · OpenPyXL</p>
+      <p><a href="https://github.com/tonpseudo/import-validator" target="_blank">Voir le dépôt GitHub →</a></p>
+    </article>
+
+    <!-- Projet JS -->
+    <article class="card">
+      <h3>✍️ Text Styler (JavaScript)</h3>
+      <p>Mini web-app qui convertit un texte brut en styles typographiques (camelCase, snake_case, etc.),
+         pratique pour les devs et rédacteurs.</p>
+      <img src="assets/js-app.png" alt="Capture Text Styler">
+      <p><em>Stack :</em> Vanilla JS · HTML · CSS</p>
+      <p><a href="https://github.com/tonpseudo/text-styler" target="_blank">Voir le dépôt GitHub →</a></p>
+    </article>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 Prénom Nom — Site hébergé gratuitement via <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
+    <p>Contact : <a href="mailto:prenom.nom@email.com">prenom.nom@email.com</a></p>
+  </footer>
+</body>
+</html>
