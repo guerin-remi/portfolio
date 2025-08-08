@@ -1,108 +1,284 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <title>CV – Rémi GUERIN</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV – Rémi GUERIN</title>
 
-  <!-- Tailwind CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet"/>
+    <!-- Google Fonts pour une typographie moderne -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Icônes Heroicons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+    <!-- Bootstrap 5 + Icons (CDN, aucun build requis) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <style>
-    /* petit dégradé d’en-tête */
-    .section-header { @apply bg-gradient-to-r from-gray-50 via-white to-gray-50; }
-  </style>
-</head>
-<body class="bg-gray-100 text-slate-800 leading-relaxed">
-  <main class="max-w-4xl mx-auto p-6 sm:p-10">
-    <!-- Header -->
-    <header class="mb-8">
-      <h1 class="text-5xl font-extrabold tracking-tight">Rémi GUERIN</h1>
-      <div class="mt-4 space-x-4 text-blue-600">
-        <a href="mailto:pro.rguerin@gmail.com" class="inline-flex items-center gap-1">
-          <i data-feather="mail"></i> pro.rguerin@gmail.com
-        </a>
-        <a href="tel:+33631335270" class="inline-flex items-center gap-1">
-          <i data-feather="phone"></i> +33 6 31 33 52 70
-        </a>
-        <a href="https://www.linkedin.com/in/rémi-guerin/" target="_blank" class="inline-flex items-center gap-1">
-          <i data-feather="linkedin"></i> LinkedIn
-        </a>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f7f9fc;
+      }
+      h1 {
+        font-weight: 700;
+      }
+      .accent-bar {
+        width: 72px;
+        height: 4px;
+        background: #0d6efd;
+        border-radius: 2px;
+      }
+      .card-header button {
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      /* Animation douce sur l'accordion */
+      .accordion-collapse:not(.show) {
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.25s ease;
+      }
+      .accordion-body {
+        padding-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container py-5">
+      <!-- Header & coordonnées -->
+      <header class="mb-4 text-center text-md-start">
+        <h1 class="display-5 mb-1">Rémi GUERIN</h1>
+        <div class="accent-bar mb-3 mx-auto mx-md-0"></div>
+        <p class="text-secondary mb-3">
+          <i class="bi bi-envelope-fill me-1"></i>
+          <a href="mailto:pro.rguerin@gmail.com" class="link-primary text-decoration-none"
+            >pro.rguerin@gmail.com</a
+          >
+          ·
+          <i class="bi bi-telephone-fill ms-2 me-1"></i>
+          <a href="tel:+33631335270" class="link-primary text-decoration-none"
+            >+33 6 31 33 52 70</a
+          >
+          ·
+          <i class="bi bi-linkedin ms-2 me-1"></i>
+          <a
+            href="https://www.linkedin.com/in/rémi-guerin/"
+            class="link-primary text-decoration-none"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </p>
+      </header>
+
+      <!-- À propos -->
+      <section class="mb-5">
+        <h2 class="h4 fw-semibold mb-3">À propos</h2>
+        <p class="lead mb-0">
+          Ingénieur spécialisé en déploiement de solutions techniques, support client et gestion de projet
+          IT. Fort d’une double compétence en relation client et administration de solutions logicielles, je
+          veille à garantir l’efficacité et la satisfaction des utilisateurs.
+        </p>
+      </section>
+
+      <!-- Boutons ouvrir/fermer tout -->
+      <div class="d-flex justify-content-end gap-2 mb-3">
+        <button id="openAll" class="btn btn-outline-primary btn-sm">
+          <i class="bi bi-arrows-collapse me-1"></i>Tout ouvrir
+        </button>
+        <button id="closeAll" class="btn btn-outline-secondary btn-sm">
+          <i class="bi bi-arrows-expand me-1"></i>Tout fermer
+        </button>
       </div>
-    </header>
 
-    <!-- À propos -->
-    <section class="prose md:prose-lg mb-10">
-      <p>
-        Ingénieur spécialisé en déploiement de solutions techniques, support client et gestion de projet IT.
-        Fort d’une double compétence en relation client et administration de solutions logicielles,
-        je veille à garantir l’efficacité et la satisfaction des utilisateurs.
-      </p>
-    </section>
+      <!-- Accordion principal -->
+      <div class="accordion" id="cvAccordion">
+        <!-- Expériences -->
+        <div class="accordion-item shadow-sm mb-3">
+          <h2 class="accordion-header" id="headingExp">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExp"
+              aria-expanded="true"
+              aria-controls="collapseExp"
+            >
+              Expériences Professionnelles
+            </button>
+          </h2>
+          <div
+            id="collapseExp"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingExp"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body">
+              <div class="mb-4">
+                <h3 class="h6 fw-semibold mb-1">
+                  Chef de projet technique – Alumnforce / Mevia
+                </h3>
+                <small class="text-secondary">07/2023 – 06/2025 · Paris</small>
+                <ul class="small mt-2 ps-4">
+                  <li>Déploiement et intégration technique de solutions SaaS pour nouveaux clients.</li>
+                  <li>Pilotage complet de projets (kick‑off, planification, tests, formation).</li>
+                  <li>Référent chef de projet pour l’application mobile.</li>
+                </ul>
+              </div>
+              <div class="mb-4">
+                <h3 class="h6 fw-semibold mb-1">IT Support & Maintenance – Dentsply Sirona</h3>
+                <small class="text-secondary">06/2022 – 07/2023 · Barcelone / Tours</small>
+                <ul class="small mt-2 ps-4">
+                  <li>Installation et maintenance systèmes Windows via SCCM.</li>
+                  <li>Support niveau 1 & 2 (français, espagnol, anglais).</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="h6 fw-semibold mb-1">Réalisateur & Coordinateur Live – YouTube</h3>
+                <small class="text-secondary">09/2021 – 06/2022 · Remote</small>
+                <ul class="small mt-2 ps-4">
+                  <li>Planification et gestion de directs YouTube hebdomadaires.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <!-- Contrôles global -->
-    <div class="flex justify-end gap-4 mb-6 text-sm text-gray-600">
-      <button id="openAll"  class="inline-flex items-center gap-1 hover:text-gray-900">
-        <i data-feather="chevron-down"></i> Tout ouvrir
-      </button>
-      <button id="closeAll" class="inline-flex items-center gap-1 hover:text-gray-900">
-        <i data-feather="chevron-up"></i> Tout fermer
-      </button>
-    </div>
+        <!-- Formation -->
+        <div class="accordion-item shadow-sm mb-3">
+          <h2 class="accordion-header" id="headingForm">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseForm"
+              aria-expanded="false"
+              aria-controls="collapseForm"
+            >
+              Formation
+            </button>
+          </h2>
+          <div
+            id="collapseForm"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingForm"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body small">
+              <ul class="ps-4">
+                <li><strong>ESAIP</strong> – Diplôme d’ingénieur informatique et réseaux (2019‑2024), Angers</li>
+                <li><strong>UCLM</strong> – Programme d’échange (2023), Albacete</li>
+                <li><strong>BME</strong> – Programme d’échange (2022), Budapest</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    <!-- Sections -->
-    <section class="mb-8">
-      <button class="section-header w-full px-6 py-4 flex justify-between items-center rounded-t-2xl shadow-md">
-        <h2 class="text-2xl font-semibold">Expériences Professionnelles</h2>
-        <i data-feather="chevron-up"></i>
-      </button>
-      <div class="content p-6 bg-white shadow-md rounded-b-2xl space-y-8">
-        <!-- … contenu identique à ton jsx (ul/li) … -->
+        <!-- Certifications -->
+        <div class="accordion-item shadow-sm mb-3">
+          <h2 class="accordion-header" id="headingCert">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseCert"
+              aria-expanded="false"
+              aria-controls="collapseCert"
+            >
+              Certifications
+            </button>
+          </h2>
+          <div
+            id="collapseCert"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingCert"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body small">
+              <ul class="ps-4">
+                <li>TOEIC 970</li>
+                <li>Azure AI Fundamentals (Microsoft)</li>
+                <li>Product Owner Professional (IMTF)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compétences -->
+        <div class="accordion-item shadow-sm mb-3">
+          <h2 class="accordion-header" id="headingSkills">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSkills"
+              aria-expanded="false"
+              aria-controls="collapseSkills"
+            >
+              Compétences
+            </button>
+          </h2>
+          <div
+            id="collapseSkills"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSkills"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body">
+              <h4 class="h6 fw-semibold">Techniques</h4>
+              <p class="small mb-2">
+                SaaS, Windows &amp; Linux, API REST, SQL, SCCM, Jira, Trello, Agile (Scrum, Kanban)
+              </p>
+              <h4 class="h6 fw-semibold">Interpersonnelles</h4>
+              <p class="small">
+                Relation client, gestion de produit, organisation &amp; coordination, communication technique
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centres d’intérêt -->
+        <div class="accordion-item shadow-sm">
+          <h2 class="accordion-header" id="headingInterets">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseInterets"
+              aria-expanded="false"
+              aria-controls="collapseInterets"
+            >
+              Centres d’intérêt & Engagement
+            </button>
+          </h2>
+          <div
+            id="collapseInterets"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingInterets"
+            data-bs-parent="#cvAccordion"
+          >
+            <div class="accordion-body small">
+              Entreprenariat, IA, basket, running, vélo, tennis de table, voyages, cinéma.<br />
+              Engagement associatif : Responsable développement du BDE (150 élèves).
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </main>
 
-    <section class="mb-8">
-      <button class="section-header w-full px-6 py-4 flex justify-between items-center rounded-t-2xl shadow-md">
-        <h2 class="text-2xl font-semibold">Formation</h2>
-        <i data-feather="chevron-up"></i>
-      </button>
-      <div class="content p-6 bg-white shadow-md rounded-b-2xl">
-        <!-- … -->
-      </div>
-    </section>
+    <!-- Bootstrap JS (pour l'accordion) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- répète pour Certifications, Compétences, Centres d’intérêt … -->
-  </main>
-
-  <!-- JS : accordéons & open/close all -->
-  <script>
-    // icônes
-    feather.replace();
-
-    // gestion accordéons
-    document.querySelectorAll("section").forEach(sec => {
-      const btn   = sec.querySelector("button");
-      const icon  = btn.querySelector("i");
-      btn.addEventListener("click", () => {
-        const content = sec.querySelector(".content");
-        content.classList.toggle("hidden");
-        icon.dataset.feather = content.classList.contains("hidden") ? "chevron-down" : "chevron-up";
-        feather.replace();
-      });
-    });
-
-    // open/close all
-    const toggleAll = (show) => {
-      document.querySelectorAll("section .content").forEach(c => c.classList.toggle("hidden", !show));
-      document.querySelectorAll("section button i").forEach(i => {
-        i.dataset.feather = show ? "chevron-up" : "chevron-down";
-      });
-      feather.replace();
-    };
-    document.getElementById("openAll").addEventListener("click", () => toggleAll(true));
-    document.getElementById("closeAll").addEventListener("click", () => toggleAll(false));
-  </script>
-</body>
-</html>
+    <script>
+      // Open / Close all helpers
+      document.getElementById("openAll").addEventListener("click", () => {
+        document.querySelectorAll("#
