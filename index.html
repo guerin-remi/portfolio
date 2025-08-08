@@ -3,80 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CV – Rémi GUERIN</title>
+    <title>CV – Rémi GUERIN</title>
 
-    <!-- Google Fonts pour une typographie moderne -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Bootstrap 5 + Icons (CDN, aucun build requis) -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <!-- Bootstrap 5 + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
     <style>
+      :root {
+        --accent: #0d6efd;
+        --bg: #f5f7fa;
+      }
       body {
         font-family: "Poppins", sans-serif;
-        background: #f7f9fc;
+        background: var(--bg);
+        color: #344054;
       }
+      /* Header */
       h1 {
         font-weight: 700;
       }
       .accent-bar {
         width: 72px;
         height: 4px;
-        background: #0d6efd;
+        background: linear-gradient(90deg, var(--accent) 0%, #67b0ff 100%);
         border-radius: 2px;
       }
-      .card-header button {
-        font-size: 1.1rem;
-        font-weight: 600;
-      }
-      /* Animation douce sur l'accordion */
-      .accordion-collapse:not(.show) {
-        display: block;
-        height: 0;
+      /* Accordion modern look */
+      .accordion-item {
+        border: none;
+        border-radius: 1rem;
         overflow: hidden;
-        transition: height 0.25s ease;
+      }
+      .accordion-button {
+        font-size: 1.125rem;
+        font-weight: 600;
+        padding: 1rem 1.25rem;
+        background-color: #f8f9fc;
+        transition: background-color 0.2s ease;
+      }
+      .accordion-button::after {
+        color: var(--accent);
+      }
+      .accordion-button:not(.collapsed) {
+        color: var(--accent);
+        background-color: #e9f2ff;
+        box-shadow: none;
       }
       .accordion-body {
-        padding-top: 0.5rem;
+        background: #ffffff;
+        padding: 1rem 1.5rem 1.5rem;
+      }
+      .accordion-item + .accordion-item {
+        margin-top: 1rem;
+      }
+      /* Subtle link-style buttons */
+      .toggle-link {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.85rem;
+        color: #6c757d;
+        background: transparent;
+        border: 0;
+      }
+      .toggle-link:hover {
+        color: var(--accent);
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
     <main class="container py-5">
-      <!-- Header & coordonnées -->
-      <header class="mb-4 text-center text-md-start">
-        <h1 class="display-5 mb-1">Rémi GUERIN</h1>
+      <!-- Header -->
+      <header class="mb-5 text-center text-md-start">
+        <h1 class="display-5 mb-1">Rémi GUERIN</h1>
         <div class="accent-bar mb-3 mx-auto mx-md-0"></div>
         <p class="text-secondary mb-3">
           <i class="bi bi-envelope-fill me-1"></i>
-          <a href="mailto:pro.rguerin@gmail.com" class="link-primary text-decoration-none"
-            >pro.rguerin@gmail.com</a
-          >
-          ·
+          <a href="mailto:pro.rguerin@gmail.com" class="link-primary text-decoration-none">pro.rguerin@gmail.com</a> ·
           <i class="bi bi-telephone-fill ms-2 me-1"></i>
-          <a href="tel:+33631335270" class="link-primary text-decoration-none"
-            >+33 6 31 33 52 70</a
-          >
-          ·
+          <a href="tel:+33631335270" class="link-primary text-decoration-none">+33&nbsp;6&nbsp;31&nbsp;33&nbsp;52&nbsp;70</a> ·
           <i class="bi bi-linkedin ms-2 me-1"></i>
-          <a
-            href="https://www.linkedin.com/in/rémi-guerin/"
-            class="link-primary text-decoration-none"
-            target="_blank"
-            >LinkedIn</a
-          >
+          <a href="https://www.linkedin.com/in/rémi-guerin/" target="_blank" class="link-primary text-decoration-none">LinkedIn</a>
         </p>
       </header>
 
@@ -84,67 +96,50 @@
       <section class="mb-5">
         <h2 class="h4 fw-semibold mb-3">À propos</h2>
         <p class="lead mb-0">
-          Ingénieur spécialisé en déploiement de solutions techniques, support client et gestion de projet
-          IT. Fort d’une double compétence en relation client et administration de solutions logicielles, je
-          veille à garantir l’efficacité et la satisfaction des utilisateurs.
+          Ingénieur spécialisé en déploiement de solutions techniques, support client et gestion de projet IT.
+          Fort d’une double compétence en relation client et administration de solutions logicielles, je veille à garantir
+          l’efficacité et la satisfaction des utilisateurs.
         </p>
       </section>
 
-      <!-- Boutons ouvrir/fermer tout -->
-      <div class="d-flex justify-content-end gap-2 mb-3">
-        <button id="openAll" class="btn btn-outline-primary btn-sm">
-          <i class="bi bi-arrows-collapse me-1"></i>Tout ouvrir
-        </button>
-        <button id="closeAll" class="btn btn-outline-secondary btn-sm">
-          <i class="bi bi-arrows-expand me-1"></i>Tout fermer
-        </button>
+      <!-- Open / Close all links -->
+      <div class="d-flex justify-content-end gap-1 mb-3">
+        <button id="openAll"  class="toggle-link"><i class="bi bi-arrows-collapse"></i> Ouvrir tout</button>
+        <span class="text-muted">|</span>
+        <button id="closeAll" class="toggle-link"><i class="bi bi-arrows-expand"></i> Fermer tout</button>
       </div>
 
-      <!-- Accordion principal -->
+      <!-- Accordion -->
       <div class="accordion" id="cvAccordion">
         <!-- Expériences -->
-        <div class="accordion-item shadow-sm mb-3">
+        <div class="accordion-item shadow-sm">
           <h2 class="accordion-header" id="headingExp">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseExp"
-              aria-expanded="true"
-              aria-controls="collapseExp"
-            >
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExp" aria-expanded="true" aria-controls="collapseExp">
               Expériences Professionnelles
             </button>
           </h2>
-          <div
-            id="collapseExp"
-            class="accordion-collapse collapse show"
-            aria-labelledby="headingExp"
-            data-bs-parent="#cvAccordion"
-          >
+          <div id="collapseExp" class="accordion-collapse collapse show" aria-labelledby="headingExp" data-bs-parent="#cvAccordion">
             <div class="accordion-body">
               <div class="mb-4">
-                <h3 class="h6 fw-semibold mb-1">
-                  Chef de projet technique – Alumnforce / Mevia
-                </h3>
-                <small class="text-secondary">07/2023 – 06/2025 · Paris</small>
+                <h3 class="h6 fw-semibold mb-1">Chef de projet technique – Alumnforce / Mevia</h3>
+                <small class="text-secondary">07/2023 – 06/2025 · Paris</small>
                 <ul class="small mt-2 ps-4">
                   <li>Déploiement et intégration technique de solutions SaaS pour nouveaux clients.</li>
-                  <li>Pilotage complet de projets (kick‑off, planification, tests, formation).</li>
+                  <li>Pilotage complet de projets (kick-off, planification, tests, formation).</li>
                   <li>Référent chef de projet pour l’application mobile.</li>
                 </ul>
               </div>
               <div class="mb-4">
-                <h3 class="h6 fw-semibold mb-1">IT Support & Maintenance – Dentsply Sirona</h3>
-                <small class="text-secondary">06/2022 – 07/2023 · Barcelone / Tours</small>
+                <h3 class="h6 fw-semibold mb-1">IT Support & Maintenance – Dentsply Sirona</h3>
+                <small class="text-secondary">06/2022 – 07/2023 · Barcelone / Tours</small>
                 <ul class="small mt-2 ps-4">
                   <li>Installation et maintenance systèmes Windows via SCCM.</li>
-                  <li>Support niveau 1 & 2 (français, espagnol, anglais).</li>
+                  <li>Support niveau 1 & 2 (français, espagnol, anglais).</li>
                 </ul>
               </div>
               <div>
                 <h3 class="h6 fw-semibold mb-1">Réalisateur & Coordinateur Live – YouTube</h3>
-                <small class="text-secondary">09/2021 – 06/2022 · Remote</small>
+                <small class="text-secondary">09/2021 – 06/2022 · Remote</small>
                 <ul class="small mt-2 ps-4">
                   <li>Planification et gestion de directs YouTube hebdomadaires.</li>
                 </ul>
@@ -154,28 +149,16 @@
         </div>
 
         <!-- Formation -->
-        <div class="accordion-item shadow-sm mb-3">
+        <div class="accordion-item shadow-sm">
           <h2 class="accordion-header" id="headingForm">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseForm"
-              aria-expanded="false"
-              aria-controls="collapseForm"
-            >
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="true" aria-controls="collapseForm">
               Formation
             </button>
           </h2>
-          <div
-            id="collapseForm"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingForm"
-            data-bs-parent="#cvAccordion"
-          >
+          <div id="collapseForm" class="accordion-collapse collapse show" aria-labelledby="headingForm" data-bs-parent="#cvAccordion">
             <div class="accordion-body small">
-              <ul class="ps-4">
-                <li><strong>ESAIP</strong> – Diplôme d’ingénieur informatique et réseaux (2019‑2024), Angers</li>
+              <ul class="ps-4 mb-0">
+                <li><strong>ESAIP</strong> – Diplôme d’ingénieur informatique et réseaux (2019-2024), Angers</li>
                 <li><strong>UCLM</strong> – Programme d’échange (2023), Albacete</li>
                 <li><strong>BME</strong> – Programme d’échange (2022), Budapest</li>
               </ul>
@@ -184,28 +167,16 @@
         </div>
 
         <!-- Certifications -->
-        <div class="accordion-item shadow-sm mb-3">
+        <div class="accordion-item shadow-sm">
           <h2 class="accordion-header" id="headingCert">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseCert"
-              aria-expanded="false"
-              aria-controls="collapseCert"
-            >
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCert" aria-expanded="true" aria-controls="collapseCert">
               Certifications
             </button>
           </h2>
-          <div
-            id="collapseCert"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingCert"
-            data-bs-parent="#cvAccordion"
-          >
+          <div id="collapseCert" class="accordion-collapse collapse show" aria-labelledby="headingCert" data-bs-parent="#cvAccordion">
             <div class="accordion-body small">
-              <ul class="ps-4">
-                <li>TOEIC 970</li>
+              <ul class="ps-4 mb-0">
+                <li>TOEIC 970</li>
                 <li>Azure AI Fundamentals (Microsoft)</li>
                 <li>Product Owner Professional (IMTF)</li>
               </ul>
@@ -214,71 +185,18 @@
         </div>
 
         <!-- Compétences -->
-        <div class="accordion-item shadow-sm mb-3">
+        <div class="accordion-item shadow-sm">
           <h2 class="accordion-header" id="headingSkills">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseSkills"
-              aria-expanded="false"
-              aria-controls="collapseSkills"
-            >
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkills" aria-expanded="true" aria-controls="collapseSkills">
               Compétences
             </button>
           </h2>
-          <div
-            id="collapseSkills"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingSkills"
-            data-bs-parent="#cvAccordion"
-          >
+          <div id="collapseSkills" class="accordion-collapse collapse show" aria-labelledby="headingSkills" data-bs-parent="#cvAccordion">
             <div class="accordion-body">
               <h4 class="h6 fw-semibold">Techniques</h4>
-              <p class="small mb-2">
-                SaaS, Windows &amp; Linux, API REST, SQL, SCCM, Jira, Trello, Agile (Scrum, Kanban)
-              </p>
+              <p class="small mb-3">SaaS, Windows &amp; Linux, API REST, SQL, SCCM, Jira, Trello, Agile (Scrum, Kanban)</p>
               <h4 class="h6 fw-semibold">Interpersonnelles</h4>
-              <p class="small">
-                Relation client, gestion de produit, organisation &amp; coordination, communication technique
-              </p>
+              <p class="small mb-0">Relation client, gestion de produit, organisation &amp; coordination, communication technique</p>
             </div>
           </div>
-        </div>
-
-        <!-- Centres d’intérêt -->
-        <div class="accordion-item shadow-sm">
-          <h2 class="accordion-header" id="headingInterets">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseInterets"
-              aria-expanded="false"
-              aria-controls="collapseInterets"
-            >
-              Centres d’intérêt & Engagement
-            </button>
-          </h2>
-          <div
-            id="collapseInterets"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingInterets"
-            data-bs-parent="#cvAccordion"
-          >
-            <div class="accordion-body small">
-              Entreprenariat, IA, basket, running, vélo, tennis de table, voyages, cinéma.<br />
-              Engagement associatif : Responsable développement du BDE (150 élèves).
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Bootstrap JS (pour l'accordion) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      // Open / Close all helpers
-      document.getElementById("openAll").addEventListener("click", () => {
-        document.querySelectorAll("#
+        </
