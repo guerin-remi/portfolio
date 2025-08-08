@@ -74,15 +74,98 @@
         color: var(--accent);
         text-decoration: underline;
       }
+      /* Header fixe */
+      .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: var(--bg);
+        box-shadow: 0 2px 8px rgba(0,0,0,0);
+        border-bottom: 1px solid transparent;
+        transition: box-shadow 0.3s ease, border-bottom-color 0.3s ease;
+      }
+      .fixed-header.scrolled {
+        border-bottom-color: #f1f3f4;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      }
+      .content-with-fixed-header {
+        margin-top: 120px;
+      }
+      
+      /* Responsive Mobile */
+      @media (max-width: 767.98px) {
+        .fixed-header {
+          padding: 0.75rem 0;
+        }
+        .fixed-header h1 {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+        .fixed-header .accent-bar {
+          margin-bottom: 0.5rem;
+        }
+        .fixed-header p {
+          font-size: 0.8rem;
+          line-height: 1.3;
+        }
+        .content-with-fixed-header {
+          margin-top: 100px;
+        }
+        .accordion-item {
+          border-radius: 0.75rem;
+        }
+        .accordion-button {
+          font-size: 1rem;
+          padding: 0.75rem 1rem;
+        }
+        .accordion-body {
+          padding: 0.75rem 1rem 1rem;
+        }
+        .row.mb-4 {
+          margin-bottom: 1.5rem !important;
+        }
+        .col-mobile-full {
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+        .badge {
+          font-size: 0.7rem;
+          padding: 0.25rem 0.5rem;
+        }
+        .toggle-link {
+          font-size: 0.75rem;
+        }
+      }
+      
+      /* Optimisations pour petits écrans */
+      @media (max-width: 575.98px) {
+        .container {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .fixed-header .container {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .fixed-header p {
+          font-size: 0.75rem;
+        }
+        .badge.me-1.mb-1 {
+          margin-bottom: 0.25rem !important;
+          margin-right: 0.25rem !important;
+        }
+      }
     </style>
   </head>
   <body>
-    <main class="container py-5">
-      <!-- Header -->
-      <header class="mb-5 text-center text-md-start">
+    <!-- Header fixe -->
+    <div class="fixed-header py-3" id="fixedHeader">
+      <div class="container">
         <h1 class="display-5 mb-1">Rémi GUERIN</h1>
-        <div class="accent-bar mb-3 mx-auto mx-md-0"></div>
-        <p class="text-secondary mb-3">
+        <div class="accent-bar mb-3"></div>
+        <p class="text-secondary mb-0">
           <i class="bi bi-envelope-fill me-1"></i>
           <a href="mailto:pro.rguerin@gmail.com" class="link-primary text-decoration-none">pro.rguerin@gmail.com</a> ·
           <i class="bi bi-telephone-fill ms-2 me-1"></i>
@@ -90,10 +173,13 @@
           <i class="bi bi-linkedin ms-2 me-1"></i>
           <a href="https://www.linkedin.com/in/rémi-guerin/" target="_blank" class="link-primary text-decoration-none">LinkedIn</a>
         </p>
-      </header>
+      </div>
+    </div>
+    
+    <main class="container py-5 content-with-fixed-header">
 
       <!-- À propos -->
-      <section class="mb-5">
+      <section class="mb-5 mt-3">
         <h2 class="h4 fw-semibold mb-3">À propos</h2>
         <p class="lead mb-0">
           Ingénieur spécialisé en déploiement de solutions techniques, support client et gestion de projet IT.
@@ -121,14 +207,14 @@
           <div id="collapseExp" class="accordion-collapse collapse show" aria-labelledby="headingExp">
             <div class="accordion-body">
               <div class="row mb-4">
-                <div class="col-md-3">
+                <div class="col-12 col-md-3 col-mobile-full">
                   <small class="text-secondary fw-semibold">07/2023 – 06/2025</small>
                   <div class="text-secondary small">Paris</div>
                 </div>
-                <div class="col-md-9">
-                  <h3 class="h6 fw-bold mb-2 text-dark">Chef de projet technique</h3>
+                <div class="col-12 col-md-9">
+                  <h3 class="h6 fw-bold mb-1 text-dark">Chef de projet technique</h3>
                   <div class="fw-semibold mb-2">Alumnforce / Mevia</div>
-                  <ul class="mb-0 ps-3">
+                  <ul class="mb-0 ps-3 small">
                     <li>Déploiement et intégration technique de solutions SaaS pour nouveaux clients</li>
                     <li>Pilotage complet de projets : kick-off, planification, tests, formation utilisateurs</li>
                     <li>Référent chef de projet pour l'application mobile et les nouvelles fonctionnalités</li>
@@ -137,14 +223,14 @@
               </div>
               
               <div class="row mb-4">
-                <div class="col-md-3">
+                <div class="col-12 col-md-3 col-mobile-full">
                   <small class="text-secondary fw-semibold">06/2022 – 07/2023</small>
                   <div class="text-secondary small">Barcelone / Tours</div>
                 </div>
-                <div class="col-md-9">
-                  <h3 class="h6 fw-bold mb-2 text-dark">IT Support & Maintenance</h3>
+                <div class="col-12 col-md-9">
+                  <h3 class="h6 fw-bold mb-1 text-dark">IT Support & Maintenance</h3>
                   <div class="fw-semibold mb-2">Dentsply Sirona</div>
-                  <ul class="mb-0 ps-3">
+                  <ul class="mb-0 ps-3 small">
                     <li>Installation et maintenance de systèmes Windows via SCCM</li>
                     <li>Support technique niveau 1 & 2 (français, espagnol, anglais)</li>
                     <li>Résolution d'incidents et accompagnement utilisateurs</li>
@@ -153,14 +239,14 @@
               </div>
               
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-12 col-md-3 col-mobile-full">
                   <small class="text-secondary fw-semibold">09/2021 – 06/2022</small>
                   <div class="text-secondary small">Remote</div>
                 </div>
-                <div class="col-md-9">
-                  <h3 class="h6 fw-bold mb-2 text-dark">Réalisateur & Coordinateur Live</h3>
+                <div class="col-12 col-md-9">
+                  <h3 class="h6 fw-bold mb-1 text-dark">Réalisateur & Coordinateur Live</h3>
                   <div class="fw-semibold mb-2">YouTube</div>
-                  <ul class="mb-0 ps-3">
+                  <ul class="mb-0 ps-3 small">
                     <li>Planification et gestion de directs YouTube hebdomadaires</li>
                     <li>Coordination d'équipes techniques et gestion de la production</li>
                   </ul>
@@ -179,36 +265,36 @@
           </h2>
           <div id="collapseForm" class="accordion-collapse collapse show" aria-labelledby="headingForm">
             <div class="accordion-body">
-              <div class="row mb-3">
-                <div class="col-md-2">
+              <div class="row mb-4">
+                <div class="col-12 col-md-3 col-mobile-full">
                   <small class="text-secondary fw-semibold">2019-2024</small>
+                  <div class="text-secondary small">Angers, France</div>
                 </div>
-                <div class="col-md-10">
+                <div class="col-12 col-md-9">
                   <h3 class="h6 fw-bold mb-1 text-dark">Diplôme d'ingénieur informatique et réseaux</h3>
-                  <div class="fw-semibold mb-1">ESAIP</div>
-                  <small class="text-secondary">Angers, France</small>
+                  <div class="fw-semibold mb-2">ESAIP</div>
                 </div>
               </div>
               
-              <div class="row mb-3">
-                <div class="col-md-2">
+              <div class="row mb-4">
+                <div class="col-12 col-md-3 col-mobile-full">
                   <small class="text-secondary fw-semibold">2023</small>
+                  <div class="text-secondary small">Albacete, Espagne</div>
                 </div>
-                <div class="col-md-10">
+                <div class="col-12 col-md-9">
                   <h3 class="h6 fw-bold mb-1 text-dark">Programme d'échange universitaire</h3>
-                  <div class="fw-semibold mb-1">Universidad de Castilla-La Mancha (UCLM)</div>
-                  <small class="text-secondary">Albacete, Espagne</small>
+                  <div class="fw-semibold mb-2">Universidad de Castilla-La Mancha (UCLM)</div>
                 </div>
               </div>
               
               <div class="row">
-                <div class="col-md-2">
+                <div class="col-12 col-md-3 col-mobile-full">
                   <small class="text-secondary fw-semibold">2022</small>
+                  <div class="text-secondary small">Budapest, Hongrie</div>
                 </div>
-                <div class="col-md-10">
+                <div class="col-12 col-md-9">
                   <h3 class="h6 fw-bold mb-1 text-dark">Programme d'échange universitaire</h3>
-                  <div class="fw-semibold mb-1">Budapest University of Technology and Economics (BME)</div>
-                  <small class="text-secondary">Budapest, Hongrie</small>
+                  <div class="fw-semibold mb-2">Budapest University of Technology and Economics (BME)</div>
                 </div>
               </div>
             </div>
@@ -224,19 +310,37 @@
           </h2>
           <div id="collapseCert" class="accordion-collapse collapse show" aria-labelledby="headingCert">
             <div class="accordion-body">
-              <div class="mb-3">
-                <h3 class="h6 fw-bold mb-1">TOEIC - Test of English for International Communication</h3>
-                <div class="text-secondary small">Score : 970/990 | Niveau C2 - Anglais professionnel</div>
+              <div class="row mb-4">
+                <div class="col-12 col-md-3 col-mobile-full">
+                  <small class="text-secondary fw-semibold">Score : 970/990</small>
+                  <div class="text-secondary small">Niveau C2</div>
+                </div>
+                <div class="col-12 col-md-9">
+                  <h3 class="h6 fw-bold mb-1 text-dark">TOEIC - Test of English for International Communication</h3>
+                  <div class="fw-semibold mb-2">Anglais professionnel</div>
+                </div>
               </div>
               
-              <div class="mb-3">
-                <h3 class="h6 fw-bold mb-1">Azure AI Fundamentals (AI-900)</h3>
-                <div class="text-secondary small">Microsoft - Intelligence artificielle et services cognitifs</div>
+              <div class="row mb-4">
+                <div class="col-12 col-md-3 col-mobile-full">
+                  <small class="text-secondary fw-semibold">AI-900</small>
+                  <div class="text-secondary small">Microsoft</div>
+                </div>
+                <div class="col-12 col-md-9">
+                  <h3 class="h6 fw-bold mb-1 text-dark">Azure AI Fundamentals</h3>
+                  <div class="fw-semibold mb-2">Intelligence artificielle et services cognitifs</div>
+                </div>
               </div>
               
-              <div>
-                <h3 class="h6 fw-bold mb-1">Product Owner Professional</h3>
-                <div class="text-secondary small">IMTF - Gestion de produit et méthodologies Agile</div>
+              <div class="row">
+                <div class="col-12 col-md-3 col-mobile-full">
+                  <small class="text-secondary fw-semibold">Certification</small>
+                  <div class="text-secondary small">IMTF</div>
+                </div>
+                <div class="col-12 col-md-9">
+                  <h3 class="h6 fw-bold mb-1 text-dark">Product Owner Professional</h3>
+                  <div class="fw-semibold mb-2">Gestion de produit et méthodologies Agile</div>
+                </div>
               </div>
             </div>
           </div>
@@ -251,65 +355,57 @@
           </h2>
           <div id="collapseSkills" class="accordion-collapse collapse show" aria-labelledby="headingSkills">
             <div class="accordion-body">
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <h4 class="h6 fw-bold mb-3 text-dark">
-                    <i class="bi bi-gear-fill me-2 text-secondary"></i>Compétences Techniques
-                  </h4>
-                  <div class="mb-3">
-                    <h5 class="small fw-semibold mb-2">Systèmes & Infrastructure</h5>
-                    <div class="d-flex flex-wrap gap-1">
-                      <span class="badge bg-light border text-dark">Windows</span>
-                      <span class="badge bg-light border text-dark">Linux</span>
-                      <span class="badge bg-light border text-dark">SCCM</span>
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <h5 class="small fw-semibold mb-2">Développement & APIs</h5>
-                    <div class="d-flex flex-wrap gap-1">
-                      <span class="badge bg-light border text-dark">API REST</span>
-                      <span class="badge bg-light border text-dark">SQL</span>
-                      <span class="badge bg-light border text-dark">SaaS</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h5 class="small fw-semibold mb-2">Outils de Gestion</h5>
-                    <div class="d-flex flex-wrap gap-1">
-                      <span class="badge bg-light border text-dark">Jira</span>
-                      <span class="badge bg-light border text-dark">Trello</span>
-                      <span class="badge bg-light border text-dark">Agile</span>
-                      <span class="badge bg-light border text-dark">Scrum</span>
-                    </div>
+              <div class="row mb-4">
+                <div class="col-12 col-md-3 col-mobile-full">
+                  <small class="text-secondary fw-semibold">Techniques</small>
+                  <div class="text-secondary small">IT & Systèmes</div>
+                </div>
+                <div class="col-12 col-md-9">
+                  <h3 class="h6 fw-bold mb-1 text-dark">Compétences Techniques</h3>
+                  <div class="fw-semibold mb-2">
+                    <span class="badge bg-light border text-dark me-1 mb-1">Windows</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Linux</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">SCCM</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">API REST</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">SQL</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">SaaS</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Jira</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Trello</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Agile</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Scrum</span>
                   </div>
                 </div>
-                
-                <div class="col-md-6">
-                  <h4 class="h6 fw-bold mb-3 text-dark">
-                    <i class="bi bi-people-fill me-2 text-secondary"></i>Compétences Interpersonnelles
-                  </h4>
-                  <div class="mb-3">
-                    <h5 class="small fw-semibold mb-2">Gestion & Leadership</h5>
-                    <div class="d-flex flex-wrap gap-1">
-                      <span class="badge bg-light border text-dark">Gestion de projet</span>
-                      <span class="badge bg-light border text-dark">Organisation</span>
-                      <span class="badge bg-light border text-dark">Coordination</span>
-                    </div>
+              </div>
+              
+              <div class="row mb-4">
+                <div class="col-12 col-md-3 col-mobile-full">
+                  <small class="text-secondary fw-semibold">Interpersonnelles</small>
+                  <div class="text-secondary small">Management</div>
+                </div>
+                <div class="col-12 col-md-9">
+                  <h3 class="h6 fw-bold mb-1 text-dark">Compétences Relationnelles</h3>
+                  <div class="fw-semibold mb-2">
+                    <span class="badge bg-light border text-dark me-1 mb-1">Gestion de projet</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Organisation</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Coordination</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Relation client</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Communication technique</span>
+                    <span class="badge bg-light border text-dark me-1 mb-1">Formation</span>
                   </div>
-                  <div class="mb-3">
-                    <h5 class="small fw-semibold mb-2">Communication</h5>
-                    <div class="d-flex flex-wrap gap-1">
-                      <span class="badge bg-light border text-dark">Relation client</span>
-                      <span class="badge bg-light border text-dark">Communication technique</span>
-                      <span class="badge bg-light border text-dark">Formation</span>
-                    </div>
-                  </div>
-                  <div>
-                    <h5 class="small fw-semibold mb-2">Langues</h5>
-                    <div class="d-flex flex-wrap gap-1">
-                      <span class="badge bg-secondary text-white">Français (Natif)</span>
-                      <span class="badge bg-secondary text-white">Anglais (C2)</span>
-                      <span class="badge bg-secondary text-white">Espagnol (B2)</span>
-                    </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-12 col-md-3 col-mobile-full">
+                  <small class="text-secondary fw-semibold">Langues</small>
+                  <div class="text-secondary small">International</div>
+                </div>
+                <div class="col-12 col-md-9">
+                  <h3 class="h6 fw-bold mb-1 text-dark">Compétences Linguistiques</h3>
+                  <div class="fw-semibold mb-2">
+                    <span class="badge bg-secondary text-white me-1 mb-1">Français (Natif)</span>
+                    <span class="badge bg-secondary text-white me-1 mb-1">Anglais (C2)</span>
+                    <span class="badge bg-secondary text-white me-1 mb-1">Espagnol (B2)</span>
                   </div>
                 </div>
               </div>
@@ -321,12 +417,22 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JavaScript pour les boutons Ouvrir/Fermer tout -->
+    <!-- JavaScript pour les boutons Ouvrir/Fermer tout et header scroll -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const openAllBtn = document.getElementById('openAll');
         const closeAllBtn = document.getElementById('closeAll');
         const accordionItems = document.querySelectorAll('.accordion-collapse');
+        const fixedHeader = document.getElementById('fixedHeader');
+
+        // Effet de scroll sur le header
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 20) {
+            fixedHeader.classList.add('scrolled');
+          } else {
+            fixedHeader.classList.remove('scrolled');
+          }
+        });
 
         // Ouvrir toutes les sections
         openAllBtn.addEventListener('click', function() {
