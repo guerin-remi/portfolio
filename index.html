@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" style="scroll-behavior: smooth;">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
@@ -40,8 +40,8 @@
     }
 
     html, body {
-      scroll-behavior: smooth;
-      scroll-padding-top: 120px;
+      scroll-behavior: auto;
+      scroll-padding-top: 0px;
     }
 
     /* Header Clean */
@@ -911,11 +911,22 @@
 
     <!-- JavaScript pour les animations et interactions -->
     <script>
+      // Forcer la position en haut immédiatement
+      if (window.scrollY !== 0) {
+        history.scrollRestoration = 'manual';
+        window.scrollTo(0, 0);
+      }
+
       document.addEventListener('DOMContentLoaded', function () {
-        // Assurer que la page démarre en haut
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        // Triple vérification que la page démarre en haut
+        window.scrollTo(0, 0);
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
+        
+        // Désactiver la restauration de scroll
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
         
         const openAllBtn = document.getElementById('openAll');
         const closeAllBtn = document.getElementById('closeAll');
@@ -1057,6 +1068,21 @@
             });
           }
         });
+
+        // Vérification finale après toutes les initialisations
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 100);
+      });
+
+      // Vérifier à nouveau au load
+      window.addEventListener('load', function() {
+        window.scrollTo(0, 0);
+      });
+
+      // Intercepter tout tentative de scroll non désirée pendant le chargement
+      window.addEventListener('beforeunload', function() {
+        window.scrollTo(0, 0);
       });
     </script>
 </body>
