@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" style="scroll-behavior: smooth;">
 
 <head>
   <meta charset="UTF-8" />
@@ -32,6 +32,12 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+      scroll-padding-top: 120px;
     }
 
     /* Header Clean */
@@ -241,6 +247,292 @@
       margin-bottom: 0.25rem !important;
       margin-right: 0.25rem !important;
     }
+
+    /* Animations modernes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes growWidth {
+      from {
+        width: 0;
+      }
+      to {
+        width: 60px;
+      }
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Classes d'animation */
+    .animate-on-scroll {
+      opacity: 0;
+      transition: all 0.6s ease-out;
+    }
+
+    .animate-on-scroll.visible {
+      opacity: 1;
+    }
+
+    .fade-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .slide-left {
+      animation: slideInLeft 0.6s ease-out forwards;
+    }
+
+    .accent-bar {
+      animation: growWidth 1s ease-out 0.5s forwards;
+      width: 0;
+    }
+
+    /* Animation des badges au hover */
+    .skill-badge {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(0);
+    }
+
+    .skill-badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Animation des accordéons améliorée */
+    .accordion-item {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(0);
+    }
+
+    .accordion-item:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Animation de la photo de profil */
+    .profile-photo {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.05) rotate(2deg);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Animation du header au scroll - corrigée */
+    .fixed-header {
+      transform: translateY(0);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fixed-header.scrolled {
+      /* Pas d'animation supplémentaire, juste les styles */
+    }
+
+    /* Animation des liens */
+    .accordion-body a {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .accordion-body a:hover {
+      color: var(--primary) !important;
+    }
+
+    /* Animation stagger pour les badges */
+    .skill-badge:nth-child(1) { animation-delay: 0.1s; }
+    .skill-badge:nth-child(2) { animation-delay: 0.2s; }
+    .skill-badge:nth-child(3) { animation-delay: 0.3s; }
+    .skill-badge:nth-child(4) { animation-delay: 0.4s; }
+    .skill-badge:nth-child(5) { animation-delay: 0.5s; }
+
+    /* Animations spéciales pour les projets */
+    .project-highlight {
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateX(0);
+    }
+
+    .project-highlight::before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      opacity: 0;
+      transform: scaleY(0);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-origin: top;
+    }
+
+    .project-highlight.visible::before {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+
+    .project-highlight:hover {
+      transform: translateX(8px);
+      background: rgba(0, 0, 0, 0.02);
+      border-radius: 8px;
+      padding-left: 1rem;
+    }
+
+    /* Animation pour les titres de projets cliquables */
+    .project-title {
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .project-title a {
+      display: block;
+      padding: 8px 0;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .project-title::after {
+      content: '→';
+      position: absolute;
+      right: -25px;
+      top: 50%;
+      transform: translateY(-50%) translateX(-10px);
+      opacity: 0.6;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .project-title:hover::after {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+
+    /* Indicateur visuel "cliquer pour en savoir plus" */
+    .project-clickable-hint {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      opacity: 0;
+      transform: translateY(5px);
+      transition: all 0.3s ease;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    .project-highlight:hover .project-clickable-hint {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Effet au hover sur tout le projet */
+    .project-highlight {
+      cursor: pointer;
+      position: relative;
+      padding: 1rem;
+      margin: -1rem;
+      border-radius: 8px;
+    }
+
+    .project-highlight:hover {
+      transform: translateX(8px);
+      background: rgba(0, 0, 0, 0.02);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Badge "Voir le projet" qui apparaît */
+    .project-view-badge {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: var(--primary);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.65rem;
+      font-weight: 500;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+    }
+
+    .project-highlight:hover .project-view-badge {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Badge spécial pour le statut des projets */
+    .project-status {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-status::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .project-status:hover::before {
+      left: 100%;
+    }
+
+    /* Animation d'apparition en cascade pour les projets */
+    @keyframes slideInFromRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .project-item {
+      animation: slideInFromRight 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .project-item:nth-child(1) { animation-delay: 0.1s; }
+    .project-item:nth-child(2) { animation-delay: 0.3s; }
+    .project-item:nth-child(3) { animation-delay: 0.5s; }
+
   </style>
 </head>
 
@@ -274,12 +566,12 @@
   <main class="container py-5 content-with-fixed-header">
 
     <!-- À propos -->
-    <section class="mb-5 mt-3">
+    <section class="mb-5 mt-3 animate-on-scroll" data-animation="fade-up">
       <h2 class="h4 section-title mb-4">À propos</h2>
       <p class="lead mb-0">
         Ingénieur spécialisé en déploiement de solutions techniques, support client et gestion de projet IT.
-        Fort d’une double compétence en relation client et administration de solutions logicielles, je veille à garantir
-        l’efficacité et la satisfaction des utilisateurs.
+        Fort d'une double compétence en relation client et administration de solutions logicielles, je veille à garantir
+        l'efficacité et la satisfaction des utilisateurs.
       </p>
     </section>
 
@@ -293,7 +585,7 @@
     <!-- Accordion -->
     <div class="accordion" id="cvAccordion">
       <!-- Expériences -->
-      <div class="accordion-item shadow-sm">
+      <div class="accordion-item shadow-sm animate-on-scroll" data-animation="slide-left">
         <h2 class="accordion-header" id="headingExp">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExp"
             aria-expanded="true" aria-controls="collapseExp">
@@ -352,8 +644,105 @@
         </div>
       </div>
 
+      <!-- Projets -->
+      <div class="accordion-item shadow-sm animate-on-scroll" data-animation="slide-left">
+        <h2 class="accordion-header" id="headingProjects">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProjects"
+            aria-expanded="true" aria-controls="collapseProjects">
+            Projets
+          </button>
+        </h2>
+        <div id="collapseProjects" class="accordion-collapse collapse show" aria-labelledby="headingProjects">
+          <div class="accordion-body">
+            <div class="row mb-4 project-item project-highlight">
+              <div class="col-12 col-md-3 col-mobile-full">
+                <small class="text-secondary fw-semibold project-status">En cours</small>
+                <div class="text-secondary small">Amélioration continue</div>
+              </div>
+              <div class="col-12 col-md-9">
+                <h3 class="h6 fw-bold mb-1 text-dark project-title">
+                  <a href="projets-workflows.html" class="text-decoration-none" style="color: var(--primary);">
+                    Automatisation de workflows métier
+                  </a>
+                  <div class="project-clickable-hint">Cliquer pour en savoir plus</div>
+                </h3>
+                <div class="fw-semibold mb-2">Google Apps Script & n8n</div>
+                <div class="project-view-badge">Voir le projet</div>
+                <ul class="mb-2 ps-3 small">
+                  <li>Automatisation de processus Google Workspace (Sheets, Drive, Gmail)</li>
+                  <li>Workflows n8n pour intégration multi-applications et APIs</li>
+                  <li>Notifications automatiques et synchronisation de données</li>
+                </ul>
+                <div>
+                  <span class="badge skill-badge me-1 mb-1">Google Apps Script</span>
+                  <span class="badge skill-badge me-1 mb-1">n8n</span>
+                  <span class="badge skill-badge me-1 mb-1">JavaScript</span>
+                  <span class="badge skill-badge me-1 mb-1">Webhooks</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row mb-4 project-item project-highlight">
+              <div class="col-12 col-md-3 col-mobile-full">
+                <small class="text-secondary fw-semibold project-status">Actif</small>
+                <div class="text-secondary small">Utilisation régulière</div>
+              </div>
+              <div class="col-12 col-md-9">
+                <h3 class="h6 fw-bold mb-1 text-dark project-title">
+                  <a href="projets-visualisation.html" class="text-decoration-none" style="color: var(--primary);">
+                    Plateforme de visualisation de données
+                  </a>
+                  <div class="project-clickable-hint">Cliquer pour en savoir plus</div>
+                </h3>
+                <div class="fw-semibold mb-2">Dashboard interactif & analytics</div>
+                <div class="project-view-badge">Voir le projet</div>
+                <ul class="mb-2 ps-3 small">
+                  <li>Création de tableaux de bord interactifs pour analyse de données métier</li>
+                  <li>Intégration de multiples sources de données avec APIs</li>
+                  <li>Visualisations dynamiques et exports automatisés</li>
+                </ul>
+                <div>
+                  <span class="badge skill-badge me-1 mb-1">Python</span>
+                  <span class="badge skill-badge me-1 mb-1">Pandas</span>
+                  <span class="badge skill-badge me-1 mb-1">Matplotlib</span>
+                  <span class="badge skill-badge me-1 mb-1">API REST</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row project-item project-highlight">
+              <div class="col-12 col-md-3 col-mobile-full">
+                <small class="text-secondary fw-semibold project-status">Stable</small>
+                <div class="text-secondary small">Version finalisée</div>
+              </div>
+              <div class="col-12 col-md-9">
+                <h3 class="h6 fw-bold mb-1 text-dark project-title">
+                  <a href="projets-formatage.html" class="text-decoration-none" style="color: var(--primary);">
+                    Outil de formatage et nettoyage de données
+                  </a>
+                  <div class="project-clickable-hint">Cliquer pour en savoir plus</div>
+                </h3>
+                <div class="fw-semibold mb-2">Pipeline ETL automatisé</div>
+                <div class="project-view-badge">Voir le projet</div>
+                <ul class="mb-2 ps-3 small">
+                  <li>Développement d'outils de nettoyage et transformation de datasets</li>
+                  <li>Détection automatique d'anomalies et correction de formats</li>
+                  <li>Pipeline de traitement par lots avec validation qualité</li>
+                </ul>
+                <div>
+                  <span class="badge skill-badge me-1 mb-1">Python</span>
+                  <span class="badge skill-badge me-1 mb-1">Pandas</span>
+                  <span class="badge skill-badge me-1 mb-1">NumPy</span>
+                  <span class="badge skill-badge me-1 mb-1">CSV/JSON</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Formation -->
-      <div class="accordion-item shadow-sm">
+      <div class="accordion-item shadow-sm animate-on-scroll" data-animation="slide-left">
         <h2 class="accordion-header" id="headingForm">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm"
             aria-expanded="true" aria-controls="collapseForm">
@@ -399,7 +788,7 @@
       </div>
 
       <!-- Certifications -->
-      <div class="accordion-item shadow-sm">
+      <div class="accordion-item shadow-sm animate-on-scroll" data-animation="slide-left">
         <h2 class="accordion-header" id="headingCert">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCert"
             aria-expanded="true" aria-controls="collapseCert">
@@ -445,7 +834,7 @@
       </div>
 
       <!-- Compétences -->
-      <div class="accordion-item shadow-sm">
+      <div class="accordion-item shadow-sm animate-on-scroll" data-animation="slide-left">
         <h2 class="accordion-header" id="headingSkills">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSkills"
             aria-expanded="true" aria-controls="collapseSkills">
@@ -516,15 +905,64 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JavaScript pour les boutons Ouvrir/Fermer tout et header scroll -->
+    <!-- JavaScript pour les animations et interactions -->
     <script>
       document.addEventListener('DOMContentLoaded', function () {
+        // Assurer que la page démarre en haut
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        
         const openAllBtn = document.getElementById('openAll');
         const closeAllBtn = document.getElementById('closeAll');
         const accordionItems = document.querySelectorAll('.accordion-collapse');
         const fixedHeader = document.getElementById('fixedHeader');
 
-        // Effet de scroll sur le header
+
+        // Intersection Observer pour les animations au scroll
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const element = entry.target;
+              const animation = element.dataset.animation;
+              
+              element.classList.add('visible');
+              if (animation) {
+                element.classList.add(animation);
+              }
+              
+              // Animation staggerée pour les badges
+              const badges = element.querySelectorAll('.skill-badge');
+              badges.forEach((badge, index) => {
+                setTimeout(() => {
+                  badge.style.opacity = '1';
+                  badge.style.transform = 'translateY(0)';
+                }, index * 100);
+              });
+              
+              observer.unobserve(element);
+            }
+          });
+        }, observerOptions);
+
+        // Observer tous les éléments animés
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+          observer.observe(el);
+        });
+
+        // Initialiser l'opacité des badges à 0
+        document.querySelectorAll('.skill-badge').forEach(badge => {
+          badge.style.opacity = '0';
+          badge.style.transform = 'translateY(20px)';
+          badge.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
+
+        // Effet de scroll sur le header - version corrigée
         window.addEventListener('scroll', function () {
           if (window.scrollY > 20) {
             fixedHeader.classList.add('scrolled');
@@ -533,27 +971,87 @@
           }
         });
 
-        // Ouvrir toutes les sections
+        // Ouvrir toutes les sections avec animation
         openAllBtn.addEventListener('click', function () {
-          accordionItems.forEach(item => {
+          accordionItems.forEach((item, index) => {
             if (!item.classList.contains('show')) {
-              const bsCollapse = new bootstrap.Collapse(item, {
-                show: true
-              });
+              setTimeout(() => {
+                const bsCollapse = new bootstrap.Collapse(item, {
+                  show: true
+                });
+              }, index * 150);
             }
           });
         });
 
-        // Fermer toutes les sections
+        // Fermer toutes les sections avec animation
         closeAllBtn.addEventListener('click', function () {
-          accordionItems.forEach(item => {
-            const bsCollapse = bootstrap.Collapse.getInstance(item);
-            if (bsCollapse) {
-              bsCollapse.hide();
-            } else {
-              item.classList.remove('show');
+          accordionItems.forEach((item, index) => {
+            setTimeout(() => {
+              const bsCollapse = bootstrap.Collapse.getInstance(item);
+              if (bsCollapse) {
+                bsCollapse.hide();
+              } else {
+                item.classList.remove('show');
+              }
+            }, index * 100);
+          });
+        });
+
+        // Animation de typing pour le titre - supprimée car remplacée par l'animation d'accueil
+
+        // Animation spéciale pour les projets quand la section devient visible
+        const projectsObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const projectHighlights = entry.target.querySelectorAll('.project-highlight');
+              projectHighlights.forEach((highlight, index) => {
+                setTimeout(() => {
+                  highlight.classList.add('visible');
+                  highlight.style.opacity = '1';
+                  highlight.style.animation = `slideInFromRight 0.6s ease-out forwards`;
+                }, index * 200);
+              });
+              projectsObserver.unobserve(entry.target);
             }
           });
+        }, { threshold: 0.2 });
+
+        // Observer la section projets
+        const projectsSection = document.querySelector('#collapseProjects');
+        if (projectsSection) {
+          projectsObserver.observe(projectsSection);
+          
+          // Initialiser les éléments de projet
+          document.querySelectorAll('.project-highlight').forEach(item => {
+            item.style.opacity = '0';
+          });
+        }
+
+        // Rendre les projets entièrement cliquables
+        document.querySelectorAll('.project-highlight').forEach(projectItem => {
+          const link = projectItem.querySelector('a');
+          if (link) {
+            projectItem.addEventListener('click', function(e) {
+              // Éviter le double-clic si on clique directement sur le lien
+              if (e.target.tagName === 'A') return;
+              
+              // Ajouter un petit effet visuel avant la navigation
+              projectItem.style.transform = 'translateX(12px) scale(0.98)';
+              setTimeout(() => {
+                window.location.href = link.href;
+              }, 150);
+            });
+
+            // Effet visuel au clic
+            projectItem.addEventListener('mousedown', function() {
+              projectItem.style.transform = 'translateX(8px) scale(0.98)';
+            });
+
+            projectItem.addEventListener('mouseup', function() {
+              projectItem.style.transform = 'translateX(8px) scale(1)';
+            });
+          }
         });
       });
     </script>
