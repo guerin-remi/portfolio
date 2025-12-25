@@ -1,0 +1,67 @@
+/* ============================================
+   VARIABLES CSS - PORTFOLIO RÉMI GUERIN
+   Design System v3.3 - Organic Warmth (Terracotta & Slate)
+   ============================================ */
+
+:root {
+  /* ===== PALETTE DE COULEURS (Slate & Terracotta) ===== */
+  
+  /* Marque / Accents - TERRACOTTA / SAUMON */
+  --primary: #1e293b;       /* Slate 800 - Plus doux que le noir */
+  --primary-light: #475569; /* Slate 600 */
+  
+  /* Accent plus mature et moins "fluo" */
+  --accent: #f87171;        /* Rouge/Orange doux (Red 400) - Chaleureux mais pas agressif */
+  --accent-light: #fca5a5;  /* Red 300 - Pastel */
+  --accent-dark: #dc2626;   /* Red 600 - Pour la lisibilité sur fond clair */
+
+  /* Arrière-plans */
+  --bg: #ffffff;            
+  --light-bg: #fffcfc;      /* Blanc cassé très légèrement chaud (presque imperceptible) */
+  --lighter-bg: #fafafa;    
+  --card-bg: #ffffff;
+  --border: #e2e8f0;        /* Slate 200 */
+
+  /* Textes */
+  --text: #334155;          /* Slate 700 */
+  --text-light: #64748b;    /* Slate 500 */
+  --text-lighter: #94a3b8;  /* Slate 400 */
+
+  /* Gradients */
+  /* Dégradé pêche/saumon très doux */
+  --gradient-primary: linear-gradient(135deg, #f87171 0%, #fb923c 100%); 
+  --gradient-dark: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  --gradient-light: linear-gradient(135deg, #fffcfc 0%, #ffffff 100%);
+  --gradient-glow: radial-gradient(circle at center, rgba(248, 113, 113, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+
+  /* ===== TYPOGRAPHIE ===== */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* ===== OMBRES (Chaudes mais subtiles) ===== */
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -1px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.03);
+  
+  /* Glow coloré très diffus */
+  --shadow-accent: 0 10px 40px -10px rgba(248, 113, 113, 0.25);
+
+  /* ===== DIVERS ===== */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1); 
+  --transition-bounce: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;       
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+}

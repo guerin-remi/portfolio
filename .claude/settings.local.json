@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(start \"index \\(3\\).html\")",
+      "Bash(dir:*)",
+      "Bash(wc:*)",
+      "Bash(start index.html)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

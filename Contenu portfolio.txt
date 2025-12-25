@@ -1,0 +1,99 @@
+# FICHIER CONTEXTE MAÎTRE : PORTFOLIO RÉMI GUÉRIN
+# VERSION : FINALE (Web + Mobile + Ops + Code)
+# UTILISATION : À fournir à l'IA génératrice de contenu/code pour le site web.
+
+---
+
+## 1. IDENTITÉ & PROFIL
+* **Nom :** Rémi Guérin
+* **Âge :** 24 ans
+* **Poste Actuel :** Chef de Projet Technique / Customer Implementation Manager
+* **Cible :** Chef de Projet Technique / IT / Déploiement SaaS.
+* **Formation :** Ingénieur Informatique / Master.
+* **Langues :** Français (Natif), Anglais (C1 - TOEIC 970, usage pro quotidien).
+* **Localisation :** Paris.
+
+---
+
+## 2. PITCH & POSITIONNEMENT (STRATÉGIE)
+* **Le Concept :** "Le maillon manquant entre la promesse commerciale et la réalité technique."
+* **L'Accroche :** Je transforme la complexité technique (API, Mobile, Data) en adoption client immédiate. Je ne suis pas qu'un gestionnaire de tickets : je construis, j'automatise et je débloque.
+* **La Valeur Ajoutée (Unique Selling Proposition) :**
+    1.  **Hybride Web/Mobile :** Je gère l'implémentation SaaS (Web) ET le déploiement complexe d'Apps Mobiles (Stores).
+    2.  **T-Shaped Profile :** * *Barre Verticale (Expertise) :* Rigueur Grand Compte & Gestion de crise.
+        * *Barre Horizontale (Polyvalence) :* Capacité à coder (React), automatiser (n8n) et parler "Dev".
+    3.  **Mindset :** "Automation First". Si une tâche est répétitive, je la scripte.
+
+---
+
+## 3. STRUCTURE DU PORTFOLIO (HÉROS & PROJETS)
+
+**TITRE DE LA SECTION PROJETS :** "Réalisations : Entre Rigueur Grand Compte & Innovation Technique"
+**LOGIQUE D'AFFICHAGE :** Utiliser des TAGS pour distinguer les typologies de projets sans les mélanger.
+
+### CARTE 1 : L'ANCRE DE CRÉDIBILITÉ (Le "Pro")
+* **Titre :** Enterprise Deployment & Mobile Factory
+* **Tag :** `MISSION GRAND COMPTE` | `SaaS & MOBILE`
+* **Clients Cités :** HEC, Mazars, EM Normandie.
+* **Le Pitch :** Pilotage de déploiements critiques pour des structures exigeantes.
+* **Détails Clés (Web) :** * Sécurisation de l'onboarding pour des milliers d'utilisateurs (Enjeu d'adoption).
+    * Consulting technique API (Définition endpoints, SSO, interconnexion SI).
+* **Détails Clés (Mobile) :** * Gestion d'une flotte de **30+ applications en Marque Blanche**.
+    * Responsable du "Last Mile Delivery" : Gestion des comptes Apple/Google, certificats, signatures (.p12), et négociation des validations (Review Guidelines).
+* **Preuve :** Taux de succès Go-Live 100%, gestion du volume et de la pression.
+
+### CARTE 2 : L'ACCÉLÉRATEUR (L'Ops)
+* **Titre :** Onboarding Automation System
+* **Tag :** `OPS & PRODUCTIVITÉ` | `LOW-CODE`
+* **Le Pitch :** Transformation d'un processus manuel lent en workflow automatisé instantané.
+* **Tech Stack :** **n8n** (Expertise avancée), API Google Workspace, Slack, CRM.
+* **Le Workflow :** Signature Client -> Trigger n8n -> Création Drive/Docs/Contrats -> Emailing Welcome.
+* **Résultat :** Temps de setup réduit de **45 min à < 5 min**. Scalabilité de l'équipe sans recrutement.
+
+### CARTE 3 : LE LABORATOIRE (La Passion/Tech)
+* **Titre :** Vialy - App Mobile B2C
+* **Tag :** `SIDE PROJECT` | `R&D`
+* **Le Pitch :** Application de découverte urbaine générant des parcours par centres d'intérêt.
+* **Tech Stack :** **React (PWA)**, JavaScript, API Géolocalisation/POI.
+* **Rôle :** Product Owner & Développeur Fullstack.
+* **Le Message :** "Je ne fais pas que configurer des logiciels, je sais les construire." Prouve la compréhension du code et du produit de A à Z.
+
+---
+
+## 4. MATRICE DE COMPÉTENCES (SKILLS)
+
+| CATÉGORIE | DÉTAILS & OUTILS |
+| :--- | :--- |
+| **Gestion de Projet** | Jira, Notion, Asana, Méthode Agile, Onboarding Client structuré. |
+| **Mobile Ops (Rare)** | **App Store Connect**, **Google Play Console**, TestFlight, Gestion Certificats & Provisioning Profiles. |
+| **Automation / Low-Code** | **n8n** (Niveau Avancé), Zapier, Make, Webhooks, JSON. |
+| **Tech & API** | **API REST** (Tests & Debug via Postman), Auth (SSO, OAuth), SQL (Lecture). |
+| **Développement** | **React.js**, JavaScript (ES6+), HTML5/CSS3, Git/GitHub. |
+| **Soft Skills** | Vulgarisation technique, Diplomatie client (Gestion de crise), Sens Business. |
+
+---
+
+## 5. TON & DESIGN (GUIDELINES)
+
+**Le Ton (Copywriting) :**
+* Direct, orienté impact, "Problem Solver".
+* Utiliser le vocabulaire technique précis (Endpoint, Build, Certificat, Workflow).
+* Pas de phrases passives. "J'ai géré" -> "Pilotage de..."
+
+**L'Univers Visuel (Palette Suggérée) :**
+* **Style :** "Architecte Moderne" (Dark Mode Tech).
+* **Fond :** `Dark Slate` (#0F172A) - Rappelle les éditeurs de code.
+* **Texte :** `Off-White` (#F8FAFC) - Lisibilité maximale.
+* **Accent (Call to Action / Tags) :** `Teal / Mint` (#2DD4BF) - Évoque la validation, n8n, la réussite.
+
+---
+
+## 6. TEXTES "À PROPOS" (NARRATIF)
+
+**Bio Courte (Header) :**
+"Je transforme la complexité technique en succès client. Chef de Projet Technique spécialisé en déploiement SaaS et Mobile, je fais le pont entre vos équipes Dév, vos Commerciaux et vos Clients Grands Comptes."
+
+**Bio Détaillée (Storytelling) :**
+"Ingénieur de formation (24 ans), j'ai construit mon parcours sur une double expertise : la rigueur de la gestion de projet et la capacité à mettre les mains dans le code.
+Au quotidien, je pilote l'implémentation de solutions pour des clients comme HEC ou Mazars, tout en gérant une flotte de 30 applications mobiles sur les stores.
+Mon obsession ? L'efficacité. C'est pourquoi j'automatise mes propres processus via n8n et que je développe mes propres produits (Vialy) pour rester à la pointe de la technique."

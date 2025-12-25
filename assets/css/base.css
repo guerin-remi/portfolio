@@ -1,0 +1,120 @@
+/* ============================================
+   STYLES DE BASE - PORTFOLIO RÉMI GUERIN
+   Design System v3.0 - Modern Light
+   ============================================ */
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8; /* Légèrement augmenté pour l'aération */
+  overflow-x: hidden;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* ===== TYPOGRAPHIE ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: -0.02em; /* Tight tracking pour un look moderne */
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem); /* Responsive typography */
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+p {
+  margin-bottom: var(--space-lg);
+  font-weight: 400;
+}
+
+/* ===== ACCENT BAR ===== */
+/* Petite barre décorative sous les titres */
+.accent-bar {
+  width: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-accent);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-lg);
+  animation: growWidth 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;
+}
+
+@keyframes growWidth {
+  from { width: 0; opacity: 0; }
+  to { width: 60px; opacity: 1; }
+}
+
+/* ===== SECTION TITLES ===== */
+.section-title {
+  color: var(--primary);
+  position: relative;
+  display: inline-block;
+  margin-bottom: var(--space-xl);
+}
+
+/* Badges (Tags) */
+.badge {
+  font-family: var(--font-body);
+  font-weight: 600;
+  padding: 0.5em 0.8em;
+  letter-spacing: 0.02em;
+}
+
+.badge.me-1.mb-1 {
+  margin-bottom: 0.25rem !important;
+  margin-right: 0.25rem !important;
+}
+
+/* ===== CONTAINERS ===== */
+.container {
+  max-width: 1200px; /* Un peu plus large pour respirer */
+}
+
+main {
+  position: relative;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background-color: rgba(248, 113, 113, 0.2); /* Terracotta transparent */
+  color: var(--accent);
+}
+
+::-moz-selection {
+  background-color: rgba(248, 113, 113, 0.2);
+  color: var(--accent);
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-lighter);
+  border-radius: var(--radius-full);
+  border: 3px solid var(--bg); /* Padding visuel autour du thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-light);
+}
