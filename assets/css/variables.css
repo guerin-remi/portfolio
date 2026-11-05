@@ -14,6 +14,9 @@
   --accent: #f87171;        /* Rouge/Orange doux (Red 400) - Chaleureux mais pas agressif */
   --accent-light: #fca5a5;  /* Red 300 - Pastel */
   --accent-dark: #dc2626;   /* Red 600 - Pour la lisibilité sur fond clair */
+  --accent-orange: #fb923c;
+  --accent-surface: #fff2e9;
+  --accent-border: #f9d7c6;
 
   /* Arrière-plans */
   --bg: #ffffff;            
@@ -29,7 +32,7 @@
 
   /* Gradients */
   /* Dégradé pêche/saumon très doux */
-  --gradient-primary: linear-gradient(135deg, #f87171 0%, #fb923c 100%); 
+  --gradient-primary: linear-gradient(135deg, var(--accent) 0%, var(--accent-orange) 100%);
   --gradient-dark: linear-gradient(135deg, #1e293b 0%, #334155 100%);
   --gradient-light: linear-gradient(135deg, #fffcfc 0%, #ffffff 100%);
   --gradient-glow: radial-gradient(circle at center, rgba(248, 113, 113, 0.12) 0%, rgba(255, 255, 255, 0) 70%);

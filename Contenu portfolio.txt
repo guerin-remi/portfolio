@@ -34,7 +34,7 @@
 ### CARTE 1 : L'ANCRE DE CRÉDIBILITÉ (Le "Pro")
 * **Titre :** Enterprise Deployment & Mobile Factory
 * **Tag :** `MISSION GRAND COMPTE` | `SaaS & MOBILE`
-* **Clients Cités :** HEC, Mazars, EM Normandie.
+* **Types de clients :** grands comptes, grandes écoles et acteurs publics.
 * **Le Pitch :** Pilotage de déploiements critiques pour des structures exigeantes.
 * **Détails Clés (Web) :** * Sécurisation de l'onboarding pour des milliers d'utilisateurs (Enjeu d'adoption).
     * Consulting technique API (Définition endpoints, SSO, interconnexion SI).
@@ -95,5 +95,5 @@
 
 **Bio Détaillée (Storytelling) :**
 "Ingénieur de formation (24 ans), j'ai construit mon parcours sur une double expertise : la rigueur de la gestion de projet et la capacité à mettre les mains dans le code.
-Au quotidien, je pilote l'implémentation de solutions pour des clients comme HEC ou Mazars, tout en gérant une flotte de 30 applications mobiles sur les stores.
+Au quotidien, je pilote l'implémentation de solutions pour des grands comptes, des grandes écoles et des acteurs publics, tout en gérant une flotte de 30 applications mobiles sur les stores.
 Mon obsession ? L'efficacité. C'est pourquoi j'automatise mes propres processus via n8n et que je développe mes propres produits (Vialy) pour rester à la pointe de la technique."

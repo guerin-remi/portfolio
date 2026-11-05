@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 340" font-family="system-ui, sans-serif">
+  <rect width="620" height="340" rx="16" fill="#fff2e9"/>
+  <text x="38" y="48" fill="#334155" font-size="17" font-weight="650">Préparation d’un nouveau dossier client</text>
+  <path d="M185 168h39m126 0h41m0 0v-72h28m-28 72v72h28m-28-72h28" fill="none" stroke="#a26448" stroke-width="3"/>
+  <rect x="38" y="133" width="147" height="70" rx="9" fill="#fff" stroke="#e3c7ba" stroke-width="2"/>
+  <rect x="224" y="133" width="126" height="70" rx="9" fill="#1e293b"/>
+  <rect x="419" y="65" width="163" height="61" rx="8" fill="#fff" stroke="#e3c7ba" stroke-width="2"/>
+  <rect x="419" y="137" width="163" height="61" rx="8" fill="#fff" stroke="#e3c7ba" stroke-width="2"/>
+  <rect x="419" y="209" width="163" height="61" rx="8" fill="#fff" stroke="#e3c7ba" stroke-width="2"/>
+  <text x="112" y="162" fill="#1e293b" font-size="16" font-weight="700" text-anchor="middle">Signature</text>
+  <text x="112" y="185" fill="#475569" font-size="14" text-anchor="middle">Nouveau client</text>
+  <text x="287" y="175" fill="#fff" font-size="23" font-weight="750" text-anchor="middle">n8n</text>
+  <text x="500" y="102" fill="#1e293b" font-size="16" font-weight="650" text-anchor="middle">Dossier Drive</text>
+  <text x="500" y="174" fill="#1e293b" font-size="16" font-weight="650" text-anchor="middle">Documents</text>
+  <text x="500" y="246" fill="#1e293b" font-size="16" font-weight="650" text-anchor="middle">E-mail d’accueil</text>
+  <text x="38" y="304" fill="#334155" font-size="16">Temps de préparation</text>
+  <text x="222" y="304" fill="#1e293b" font-size="18" font-weight="750">45 min → &lt; 5 min</text>
+</svg>

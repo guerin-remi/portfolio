@@ -1,171 +1,51 @@
-/* ============================================
-   STYLES PAGES PROJETS - PORTFOLIO RÉMI GUERIN
-   Design System v3.1 - Modern Light
-   ============================================ */
-
-/* ===== GLOBAL ===== */
 body {
-  background: var(--light-bg); /* Fond gris très clair pour faire ressortir le contenu blanc */
+  background: #fff;
   font-family: var(--font-body);
   color: var(--text);
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: var(--font-heading);
   color: var(--primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -.02em;
 }
 
-/* ===== NAVIGATION ===== */
 .back-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  color: var(--text-light);
+  gap: .45rem;
+  min-height: 2.75rem;
+  margin-bottom: 1.15rem;
+  color: var(--primary);
+  font-size: .9rem;
+  font-weight: 650;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-full);
-  background: #ffffff;
-  border: 1px solid var(--border);
-  transition: all 0.2s ease;
-  margin-bottom: var(--space-xl);
 }
 
-.back-link:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  transform: translateX(-3px);
-  box-shadow: var(--shadow-sm);
-}
+.back-link:hover { color: var(--primary); text-decoration: underline; text-decoration-color: var(--accent-orange); text-underline-offset: .2em; }
 
-/* ===== PROJECT HEADER ===== */
-.project-header {
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  padding: var(--space-xl);
-  margin-bottom: var(--space-xl);
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Bandeau coloré décoratif en haut */
-.project-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 6px;
-  background: var(--gradient-primary);
-}
-
+.project-header { max-width: 48rem; margin-bottom: 1.75rem; }
 .project-title {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 800;
-  margin-bottom: var(--space-sm);
-  line-height: 1.1;
-}
-
-.project-lead {
-  font-size: 1.25rem;
-  color: var(--text-light);
-  margin-bottom: var(--space-lg);
-  font-weight: 500;
-}
-
-/* ===== BADGES ===== */
-.badge {
-  background: var(--light-bg) !important;
-  color: var(--text-light) !important;
-  border: 1px solid var(--border) !important;
-  padding: 0.5em 1em;
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 500;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-family: var(--font-body);
-}
-
-/* ===== CONTENT SECTIONS ===== */
-.content-card {
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  padding: var(--space-xl);
-  box-shadow: var(--shadow-sm);
-  margin-bottom: var(--space-xl);
-}
-
-.content-title {
-  font-size: 1.5rem;
+  margin-bottom: .65rem;
+  font-size: clamp(1.9rem, 5vw, 3rem);
   font-weight: 700;
-  margin-bottom: var(--space-lg);
-  padding-bottom: var(--space-sm);
-  border-bottom: 1px solid var(--border);
-  color: var(--primary);
+  line-height: 1.15;
 }
+.project-lead { color: var(--text-light); font-size: clamp(1rem, 2.2vw, 1.15rem); }
 
-p {
-  color: var(--text);
-  margin-bottom: var(--space-md);
+.content-card, .sidebar-card {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
 }
-
-em.placeholder-text {
-  color: var(--text-lighter);
-  font-style: italic;
-}
-
-/* ===== SIDEBAR CARD ===== */
-.sidebar-card {
-  background: #ffffff;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  padding: var(--space-lg);
-  box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 2rem;
-}
-
-.sidebar-title {
-  font-size: 1.1rem;
+.content-card { margin-bottom: 1.4rem; }
+.content-title, .sidebar-title {
+  margin-bottom: .5rem;
+  font-size: 1.22rem;
   font-weight: 700;
-  margin-bottom: var(--space-md);
-  color: var(--primary);
-  font-family: var(--font-heading);
 }
+.sidebar-title { font-size: 1.1rem; }
 
-.sidebar-section {
-  margin-bottom: var(--space-lg);
-}
-
-.sidebar-label {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 700;
-  color: var(--text-lighter);
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-/* ===== STATUS BADGES ===== */
-.status-badge {
-  display: inline-block;
-  padding: 0.35em 1em;
-  border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: white !important;
-}
-
-.status-badge.active { background: #059669 !important; border: none !important; }
-.status-badge.progress { background: #e11d48 !important; border: none !important; }
-.status-badge.stable { background: #6366f1 !important; border: none !important; }
+.project-visual { max-width: 38.75rem; margin: 0 0 1.5rem; }
+.project-visual img { display: block; width: 100%; height: auto; }
+.project-visual figcaption { margin-top: .35rem; color: var(--text-light); font-size: .82rem; }

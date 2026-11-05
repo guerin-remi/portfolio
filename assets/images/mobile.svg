@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 340" font-family="system-ui, sans-serif">
+  <rect width="620" height="340" rx="16" fill="#fff2e9"/>
+  <text x="38" y="49" fill="#334155" font-size="17" font-weight="650">Circuit de publication mobile</text>
+  <rect x="40" y="125" width="156" height="90" rx="10" fill="#fff" stroke="#e3c7ba" stroke-width="2"/>
+  <text x="118" y="160" fill="#1e293b" font-size="18" font-weight="700" text-anchor="middle">Version cliente</text>
+  <text x="118" y="187" fill="#475569" font-size="15" text-anchor="middle">Signature et tests</text>
+  <path d="M196 170h58m0 0v-66h44m-44 66v66h44" fill="none" stroke="#a26448" stroke-width="3"/>
+  <circle cx="254" cy="170" r="5" fill="#fb923c"/>
+  <rect x="298" y="66" width="274" height="76" rx="10" fill="#fff" stroke="#e3c7ba" stroke-width="2"/>
+  <rect x="298" y="198" width="274" height="76" rx="10" fill="#fff" stroke="#e3c7ba" stroke-width="2"/>
+  <text x="325" y="99" fill="#1e293b" font-size="18" font-weight="700">App Store</text>
+  <text x="325" y="123" fill="#475569" font-size="15">TestFlight et revue iOS</text>
+  <text x="325" y="231" fill="#1e293b" font-size="18" font-weight="700">Google Play</text>
+  <text x="325" y="255" fill="#475569" font-size="15">Tests et revue Android</text>
+  <circle cx="540" cy="103" r="11" fill="#f9a79a"/>
+  <circle cx="540" cy="235" r="11" fill="#f9a79a"/>
+</svg>

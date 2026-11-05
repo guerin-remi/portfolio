@@ -4,441 +4,254 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CV - Rémi GUERIN</title>
+  <title>Rémi Guerin — Chef de projet technique</title>
+  <meta name="description" content="Rémi Guerin, chef de projet technique. Je pilote des projets logiciels du cadrage à la mise en service, avec les équipes métier et techniques.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Rémi Guerin — Chef de projet technique">
+  <meta property="og:description" content="Je pilote des projets logiciels du cadrage à la mise en service. Découvrez trois cas concrets en déploiement, publication mobile et automatisation.">
+  <meta property="og:url" content="https://guerin-remi.github.io/portfolio/">
+  <meta property="og:image" content="https://guerin-remi.github.io/portfolio/assets/apercu-portfolio.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rémi Guerin, chef de projet technique">
+  <meta name="theme-color" content="#fff2e9">
+  <link rel="canonical" href="https://guerin-remi.github.io/portfolio/">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIFNpbXBsZSByb3VuZGVkIHNxdWFyZSBiYWNrZ3JvdW5kIC0tPgogIDxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjYiIGZpbGw9IiMzNzQxNTEiLz4KICAKICA8IS0tIEluaXRpYWxzIFJHIGluIGNsZWFuIHR5cG9ncmFwaHkgLS0+CiAgPHRleHQgeD0iMTYiIHk9IjIwIiBmb250LWZhbWlseT0ic3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjZmZmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMC41cHgiPlJHPC90ZXh0Pgo8L3N2Zz4=">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5 + Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Icônes -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/variables.css" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/components.css" />
-  <link rel="stylesheet" href="assets/css/animations.css" />
   <link rel="stylesheet" href="assets/css/hero.css" />
   <link rel="stylesheet" href="assets/css/modern.css" />
 </head>
-
-<body>
-  <!-- Scroll Progress Bar -->
-  <div class="scroll-progress"></div>
-
-  <!-- Smart Navbar -->
-  <nav class="navbar-scroll">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a href="#" class="navbar-brand">Rémi GUERIN</a>
-      <div class="navbar-contacts">
-        <a href="mailto:pro.rguerin@gmail.com" title="Email"><i class="bi bi-envelope-fill"></i></a>
-        <a href="tel:+33631335270" title="Téléphone"><i class="bi bi-telephone-fill"></i></a>
-        <a href="https://www.linkedin.com/in/rémi-guerin/" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-content">
-      <img src="profilv3.png" alt="Photo de profil - Rémi GUERIN" class="hero-photo" />
-      <h1 class="hero-title">Rémi GUERIN</h1>
-      <div class="hero-accent-bar"></div>
-      <p class="hero-subtitle">
-        Chef de Projet Technique & Déploiement.<br>
-        J'accompagne la mise en place de logiciels web et d'applications mobiles.
-      </p>
-
-      <div class="hero-contacts">
-        <a href="mailto:pro.rguerin@gmail.com" class="hero-contact-item">
-          <i class="bi bi-envelope-fill"></i>
-          <span>pro.rguerin@gmail.com</span>
+<body class="portfolio">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-nav">
+    <div class="container site-nav-inner">
+      <a class="site-name" href="#accueil">Rémi Guerin</a>
+      <div class="site-contacts" role="group" aria-label="Me contacter">
+        <a href="mailto:pro.rguerin@gmail.com" aria-label="E-mail : pro.rguerin@gmail.com">
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+          <span class="email-full">pro.rguerin@gmail.com</span><span class="email-short">E-mail</span>
         </a>
-        <a href="tel:+33631335270" class="hero-contact-item">
-          <i class="bi bi-telephone-fill"></i>
-          <span>+33 6 31 33 52 70</span>
-        </a>
-        <a href="https://www.linkedin.com/in/rémi-guerin/" target="_blank" class="hero-contact-item">
-          <i class="bi bi-linkedin"></i>
-          <span>LinkedIn</span>
+        <a href="https://www.linkedin.com/in/r%C3%A9mi-guerin/">
+          <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
         </a>
       </div>
-
-      <a href="#projects-section" class="hero-cta">
-        <span>Découvrir mes projets</span>
-      </a>
+      <nav class="site-nav-links" aria-label="Navigation principale">
+        <a href="#services">Expertise</a>
+        <a href="#projects-section">Réalisations</a>
+        <a href="#projets-personnels">Le labo</a>
+        <a href="#parcours">Parcours</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="scroll-indicator">
-      <i class="bi bi-chevron-down arrow-scroll"></i>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <main class="content-section">
-
-    <!-- À propos -->
-    <section id="about" class="container py-5">
-      <div class="section-header fade-in-up">
-        <h2>À propos</h2>
-        <div class="accent-line"></div>
-      </div>
-
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-7">
-          <p class="lead fw-medium">
-            Ingénieur de formation, j'ai construit mon parcours sur une conviction simple : une solution technique ne vaut rien si elle n'est pas correctement déployée et adoptée par ses utilisateurs.
-          </p>
-          <p>
-            Au quotidien, je fais le pont entre la technique et le métier. Je pilote des déploiements d'envergure (plusieurs dizaines de milliers d'utilisateurs) pour des clients comme <strong>L'Oréal, CentraleSupélec ou Forvis Mazars</strong>.
-          </p>
-          <p>
-            Que ce soit pour du Web, du Mobile ou de l'intégration API, mon rôle est de garantir que la solution s'intègre parfaitement dans l'écosystème du client.
-          </p>
-        </div>
-        <div class="col-lg-5">
-          <div class="p-4 bg-white border rounded-4 shadow-sm">
-            <h3 class="h5 fw-semibold mb-3">En résumé</h3>
-            <ul class="mb-0 ps-3">
-              <li><strong>Gestion de Projet :</strong> Pilotage de déploiements complexes et multi-acteurs.</li>
-              <li><strong>Technique :</strong> Capacité à auditer une API, configurer un SSO ou requêter une BDD.</li>
-              <li><strong>Mobile :</strong> Maîtrise des processus de publication (Stores Apple/Google).</li>
-              <li><strong>Pragmatisme :</strong> Je privilégie toujours la solution la plus efficace et maintenable.</li>
-            </ul>
+  <main id="contenu">
+    <section id="accueil" class="hero-section" aria-labelledby="titre">
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="hero-role">Chef de projet technique · Paris</p>
+          <h1 id="titre">Vos projets logiciels, du cadrage à la <span>mise en service</span></h1>
+          <div class="hero-accent-bar" aria-hidden="true"></div>
+          <p id="about" class="hero-subtitle">Je fais le lien entre la promesse commerciale et la réalité technique. Avec les équipes métier et IT, je pilote les intégrations, la recette et l’adoption.</p>
+          <div class="hero-actions">
+            <a href="mailto:pro.rguerin@gmail.com" class="action action-primary">M’écrire <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            <a href="assets/CV_Remi_GUERIN.pdf" download class="action action-secondary">Télécharger mon CV <i class="bi bi-download" aria-hidden="true"></i></a>
           </div>
+          <div class="hero-references">
+            <p>Parmi les équipes accompagnées</p>
+            <div><strong>Grands comptes</strong><strong>Grandes écoles</strong><strong>Acteurs publics</strong></div>
+          </div>
+        </div>
+        <img src="assets/portrait-remi.webp" width="685" height="850" fetchpriority="high" alt="Portrait de Rémi Guerin" class="hero-photo">
+      </div>
+    </section>
+
+    <section class="delivery-results" aria-labelledby="resultats-titre">
+      <div class="container">
+        <h2 id="resultats-titre">Résultats de terrain</h2>
+        <dl>
+          <div><dt>Clients accompagnés</dt><dd>50+</dd></div>
+          <div><dt>Délai moyen de déploiement<br>7 mois → 5,5 mois</dt><dd>−21 %</dd></div>
+          <div><dt>Satisfaction sur l’accompagnement et le pilotage</dt><dd>9,2/10</dd></div>
+          <div><dt>Apps clientes publiées sur les stores</dt><dd>30+</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="services" class="container section-spacing" aria-labelledby="services-titre">
+      <h2 id="services-titre" class="section-title">Ce que je peux faire pour vous</h2>
+      <div class="service-grid">
+        <article>
+          <i class="bi bi-kanban" aria-hidden="true"></i>
+          <h3>Piloter un déploiement logiciel</h3>
+          <p>Fixer le périmètre et les jalons, coordonner les parties prenantes, puis organiser la recette, la formation et la mise en service.</p>
+        </article>
+        <article>
+          <i class="bi bi-diagram-3" aria-hidden="true"></i>
+          <h3>Intégrer un logiciel à votre SI</h3>
+          <p>Tester les API REST dans Postman, cadrer le SSO avec les équipes IT et préparer la reprise de données.</p>
+        </article>
+        <article>
+          <i class="bi bi-phone" aria-hidden="true"></i>
+          <h3>Faire évoluer et publier des apps mobiles</h3>
+          <p>Prioriser les évolutions avec les développeurs, préparer les tests et coordonner la publication sur l’App Store et Google Play.</p>
+        </article>
+        <article>
+          <i class="bi bi-arrow-repeat" aria-hidden="true"></i>
+          <h3>Automatiser vos opérations avec n8n</h3>
+          <p>Relier le CRM, Jira et les outils de suivi pour éviter les ressaisies, déclencher les relances et signaler les blocages.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects-section" class="case-band" aria-labelledby="cas-titre">
+      <div class="container section-spacing">
+        <h2 id="cas-titre" class="section-title">Trois cas concrets</h2>
+        <div class="case-list">
+          <article class="case-card">
+            <p class="case-tag"><i class="bi bi-kanban" aria-hidden="true"></i> Déploiement SaaS</p>
+            <h3><a href="pages/projects/deployments.html">Standardiser les déploiements SaaS</a></h3>
+            <p>Pour de grandes organisations aux intégrations spécifiques, j’ai formalisé les étapes dans des playbooks et automatisé les tâches récurrentes de l’équipe.</p>
+            <p class="case-result"><strong>81&nbsp;%</strong><span>de projets standardisés, contre 55&nbsp;% avant</span></p>
+            <span class="case-more" aria-hidden="true">Lire le cas <i class="bi bi-arrow-right"></i></span>
+          </article>
+
+          <article class="case-card">
+            <p class="case-tag"><i class="bi bi-phone" aria-hidden="true"></i> Apps mobiles</p>
+            <h3><a href="pages/projects/mobile.html">Publier des apps en marque blanche</a></h3>
+            <p>Un même produit décliné pour chaque client&nbsp;: j’ai coordonné les tests, la signature et les soumissions à l’App Store et à Google Play.</p>
+            <p class="case-result"><strong>30+</strong><span>apps clientes publiées, plusieurs dizaines de milliers de téléchargements cumulés</span></p>
+            <span class="case-more" aria-hidden="true">Lire le cas <i class="bi bi-arrow-right"></i></span>
+          </article>
+
+          <article class="case-card">
+            <p class="case-tag"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Automatisation</p>
+            <h3><a href="pages/projects/automation.html">Automatiser l’ouverture des dossiers</a></h3>
+            <p>Après chaque signature, tout se faisait à la main. J’ai relié les outils avec n8n&nbsp;: dossier Drive, documents et e-mail d’accueil.</p>
+            <p class="case-result"><strong>&lt;&nbsp;5&nbsp;min</strong><span>au lieu de 45 pour préparer un nouveau dossier client</span></p>
+            <span class="case-more" aria-hidden="true">Lire le cas <i class="bi bi-arrow-right"></i></span>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Projets Section -->
-    <section id="projects-section" class="container py-5">
-      <div class="section-header fade-in-up">
-        <h2>Réalisations</h2>
-        <div class="accent-line"></div>
-        <p class="section-subtitle mt-3">
-          Focus sur trois aspects de mon expertise
-        </p>
-      </div>
-
-      <div class="projects-grid container">
-        
-        <!-- Projet 1 : Le Pro -->
-        <div class="project-card">
-          <div class="project-card-image">
-            <i class="bi bi-building-check project-card-icon"></i>
-            <span class="project-card-status status-active">Projet Client</span>
-          </div>
-          <div class="project-card-content">
-            <h3 class="project-card-title">Déploiement Grands Comptes</h3>
-            <p class="project-card-subtitle">Pilotage & Intégration</p>
-            <div class="project-card-description">
-              <ul>
-                <li>Collaboration avec des comptes majeurs (L'Oréal, HEC, Mazars...).</li>
-                <li>Périmètres variés : Déploiement complet, Mobile uniquement, ou Intégration API/SSO.</li>
-                <li>Environnements à fort trafic (+10k utilisateurs).</li>
-              </ul>
-            </div>
-            <div class="project-card-tags">
-              <span class="project-tag">Gestion de Projet</span>
-              <span class="project-tag">Intégration SI</span>
-              <span class="project-tag">Mobile Ops</span>
-            </div>
-            <a href="pages/projects/deployments.html" class="project-card-link">
-              En savoir plus <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Projet 2 : L'Ops -->
-        <div class="project-card">
-          <div class="project-card-image">
-            <i class="bi bi-robot project-card-icon"></i>
-            <span class="project-card-status status-progress">Interne</span>
-          </div>
-          <div class="project-card-content">
-            <h3 class="project-card-title">Automatisation du Cycle Client</h3>
-            <p class="project-card-subtitle">Productivité & n8n</p>
-            <div class="project-card-description">
-              <ul>
-                <li>Orchestration de <strong>11 workflows</strong> interconnectés.</li>
-                <li>Pilotage automatique : Onboarding, Support (JIRA) et Satisfaction.</li>
-                <li>Monitoring proactif des délais et alertes intelligentes.</li>
-              </ul>
-            </div>
-            <div class="project-card-tags">
-              <span class="project-tag">n8n</span>
-              <span class="project-tag">JIRA API</span>
-              <span class="project-tag">Google Sheets</span>
-            </div>
-            <a href="pages/projects/automation.html" class="project-card-link">
-              En savoir plus <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Projet 3 : Le Perso -->
-        <div class="project-card">
-          <div class="project-card-image">
-            <i class="bi bi-phone project-card-icon"></i>
-            <span class="project-card-status status-stable">POC / R&D</span>
-          </div>
-          <div class="project-card-content">
-            <h3 class="project-card-title">Vialy (POC Technique)</h3>
-            <p class="project-card-subtitle">App Mobile Expérimentale</p>
-            <div class="project-card-description">
-              <ul>
-                <li>Développement d'une application de découverte urbaine (POC).</li>
-                <li>Objectif : Maîtriser les contraintes de développement (React, PWA).</li>
-                <li>Veille technologique et expérimentation produit.</li>
-              </ul>
-            </div>
-            <div class="project-card-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">Prototypage</span>
-            </div>
-            <a href="pages/projects/vialy.html" class="project-card-link">
-              En savoir plus <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
+    <section class="container section-spacing" aria-labelledby="methode-titre">
+      <h2 id="methode-titre" class="section-title">Comment je travaille</h2>
+      <p class="section-intro">Sur un déploiement, je clarifie dès le départ ce qui doit être prêt au lancement, qui en est responsable et comment on saura que ça fonctionne.</p>
+      <ol class="method-grid">
+        <li><span aria-hidden="true">01</span><h3>Cadrage</h3><p>Le périmètre, les jalons, les responsables et les critères de recette.</p></li>
+        <li><span aria-hidden="true">02</span><h3>Intégration</h3><p>Les flux, les accès, la reprise de données et les tests d’interface.</p></li>
+        <li><span aria-hidden="true">03</span><h3>Recette</h3><p>Les scénarios métier, les anomalies à corriger et la validation avant lancement.</p></li>
+        <li><span aria-hidden="true">04</span><h3>Adoption</h3><p>La formation, la mise en service et les premiers retours des utilisateurs.</p></li>
+      </ol>
     </section>
 
-    <!-- Open / Close all links -->
-    <div class="container">
-      <div class="d-flex justify-content-end gap-1 mb-3">
-        <button id="openAll" class="toggle-link"><i class="bi bi-arrows-collapse"></i> Ouvrir tout</button>
-        <span class="text-muted">|</span>
-        <button id="closeAll" class="toggle-link"><i class="bi bi-arrows-expand"></i> Fermer tout</button>
-      </div>
-    </div>
-
-    <div class="accordion container" id="cvAccordion">
-      <!-- Expériences -->
-      <div class="accordion-item shadow-sm animate-on-scroll" data-animation="slide-left">
-        <h2 class="accordion-header" id="headingExp">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExp"
-            aria-expanded="true" aria-controls="collapseExp">
-            Expériences Professionnelles
-          </button>
-        </h2>
-        <div id="collapseExp" class="accordion-collapse collapse show" aria-labelledby="headingExp">
-          <div class="accordion-body">
-            <div class="row mb-4">
-              <div class="col-12 col-md-3 col-mobile-full">
-                <small class="text-secondary fw-semibold">07/2023 – Présent</small>
-                <div class="text-secondary small">Paris</div>
-              </div>
-              <div class="col-12 col-md-9">
-                <h3 class="h6 fw-bold mb-1 text-dark">Chef de Projet Technique</h3>
-                <div class="fw-semibold mb-2">Alumnforce / Mevia</div>
-                <ul class="mb-0 ps-3 small">
-                  <li>Pilotage de projets clients (Web, Mobile, Intégration) pour des comptes clés.</li>
-                  <li>Coordination des équipes internes et suivi du planning.</li>
-                  <li>Gestion de la conformité et publication des applications mobiles (30+ apps).</li>
-                  <li>Optimisation des processus internes (outillage et automatisation).</li>
-                </ul>
-              </div>
+    <section id="projets-personnels" class="lab-band" aria-labelledby="labo-titre">
+      <div class="container section-spacing">
+        <h2 id="labo-titre" class="section-title">Le labo</h2>
+        <p class="section-intro">Deux applications que j’ai conçues à partir de besoins du quotidien. <a href="pages/projects/produit.html">Lire ma démarche produit</a></p>
+        <div class="lab-grid">
+          <article>
+            <div class="lab-visual vialy-visual">
+              <img src="assets/images/vialy-decouvrir.webp" width="420" height="909" loading="lazy" alt="Écran Découvrir de VIALY, avec les filtres et les balades recommandées">
+              <img src="assets/images/vialy-parcours.webp" width="420" height="909" loading="lazy" alt="Sélection des balades à Paris dans VIALY">
             </div>
-
-            <div class="row mb-4">
-              <div class="col-12 col-md-3 col-mobile-full">
-                <small class="text-secondary fw-semibold">06/2022 – 07/2023</small>
-                <div class="text-secondary small">Barcelone / Tours</div>
-              </div>
-              <div class="col-12 col-md-9">
-                <h3 class="h6 fw-bold mb-1 text-dark">IT Support & Maintenance</h3>
-                <div class="fw-semibold mb-2">Dentsply Sirona</div>
-                <ul class="mb-0 ps-3 small">
-                  <li>Gestion de parc informatique et déploiement master via SCCM.</li>
-                  <li>Support utilisateur trilingue (Niveau 1 & 2).</li>
-                  <li>Résolution d'incidents matériels et logiciels.</li>
-                </ul>
-              </div>
+            <h3><a href="pages/projects/vialy.html">VIALY <i class="bi bi-arrow-right" aria-hidden="true"></i></a></h3>
+            <p>Découvrir des lieux à pied et choisir une balade selon ses envies.</p>
+          </article>
+          <article>
+            <div class="lab-visual mypc-visual">
+              <img src="assets/images/mypc.webp" width="650" height="470" loading="lazy" alt="Accueil de MyPC, qui propose de trouver un ordinateur en six questions">
             </div>
-
-            <div class="row">
-              <div class="col-12 col-md-3 col-mobile-full">
-                <small class="text-secondary fw-semibold">09/2021 – 06/2022</small>
-                <div class="text-secondary small">Remote</div>
-              </div>
-              <div class="col-12 col-md-9">
-                <h3 class="h6 fw-bold mb-1 text-dark">Réalisateur & Coordinateur Live</h3>
-                <div class="fw-semibold mb-2">YouTube</div>
-                <ul class="mb-0 ps-3 small">
-                  <li>Gestion technique et logistique de directs hebdomadaires.</li>
-                  <li>Coordination des intervenants et de la production.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Formation -->
-      <div class="accordion-item shadow-sm animate-on-scroll" data-animation="slide-left">
-        <h2 class="accordion-header" id="headingForm">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm"
-            aria-expanded="true" aria-controls="collapseForm">
-            Formation
-          </button>
-        </h2>
-        <div id="collapseForm" class="accordion-collapse collapse show" aria-labelledby="headingForm">
-          <div class="accordion-body">
-            <div class="row mb-4">
-              <div class="col-12 col-md-3 col-mobile-full">
-                <small class="text-secondary fw-semibold">2019-2024</small>
-                <div class="text-secondary small">Angers, France</div>
-              </div>
-              <div class="col-12 col-md-9">
-                <h3 class="h6 fw-bold mb-1 text-dark">Diplôme d'Ingénieur Informatique</h3>
-                <div class="fw-semibold mb-2">ESAIP</div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12 col-md-3 col-mobile-full">
-                <small class="text-secondary fw-semibold">International</small>
-                <div class="text-secondary small">Espagne & Hongrie</div>
-              </div>
-              <div class="col-12 col-md-9">
-                <h3 class="h6 fw-bold mb-1 text-dark">Echanges universitaires</h3>
-                <div class="fw-semibold mb-2">UCLM (Albacete) & BME (Budapest)</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Certifications -->
-      <div class="accordion-item shadow-sm animate-on-scroll" data-animation="slide-left">
-        <h2 class="accordion-header" id="headingCert">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCert"
-            aria-expanded="true" aria-controls="collapseCert">
-            Certifications
-          </button>
-        </h2>
-        <div id="collapseCert" class="accordion-collapse collapse show" aria-labelledby="headingCert">
-          <div class="accordion-body">
-            <div class="row mb-4">
-              <div class="col-12 col-md-3 col-mobile-full">
-                <small class="text-secondary fw-semibold">Anglais</small>
-                <div class="text-secondary small">Niveau C1</div>
-              </div>
-              <div class="col-12 col-md-9">
-                <h3 class="h6 fw-bold mb-1 text-dark">TOEIC - 970/990</h3>
-                <div class="fw-semibold mb-2">Anglais professionnel courant</div>
-              </div>
-            </div>
-
-            <div class="row mb-4">
-              <div class="col-12 col-md-3 col-mobile-full">
-                <small class="text-secondary fw-semibold">Microsoft</small>
-                <div class="text-secondary small">Azure</div>
-              </div>
-              <div class="col-12 col-md-9">
-                <h3 class="h6 fw-bold mb-1 text-dark">AI-900 : Azure AI Fundamentals</h3>
-                <div class="fw-semibold mb-2">Bases de l'IA et des services cognitifs</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Compétences Section Moderne -->
-    <section class="container py-5">
-      <div class="section-header fade-in-up">
-        <h2>Compétences</h2>
-        <div class="accent-line"></div>
-      </div>
-
-      <div class="skills-grid container fade-in-up">
-        <!-- Compétences Techniques -->
-        <div class="skill-category">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">
-              <i class="bi bi-briefcase"></i>
-            </div>
-            <div>
-              <h3 class="skill-category-title">Gestion de Projet</h3>
-              <p class="skill-category-subtitle">Pilotage & Méthode</p>
-            </div>
-          </div>
-          <div class="skill-items">
-            <span class="badge skill-badge me-2 mb-2">Planification</span>
-            <span class="badge skill-badge me-2 mb-2">Gestion des risques</span>
-            <span class="badge skill-badge me-2 mb-2">Animation COPRIL/COPIL</span>
-            <span class="badge skill-badge me-2 mb-2">Coordination technique</span>
-            <span class="badge skill-badge me-2 mb-2">Recette / QA</span>
-            <span class="badge skill-badge me-2 mb-2">Conduite du changement</span>
-            <span class="badge skill-badge me-2 mb-2">Jira / Notion</span>
-          </div>
-        </div>
-
-        <!-- Compétences Relationnelles (Renommé Expertise Technique pour cohérence avec le contenu mixte) -->
-        <div class="skill-category">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">
-              <i class="bi bi-hdd-network"></i>
-            </div>
-            <div>
-              <h3 class="skill-category-title">Expertise Technique</h3>
-              <p class="skill-category-subtitle">Compréhension & Outils</p>
-            </div>
-          </div>
-          <div class="skill-items">
-            <span class="badge skill-badge me-2 mb-2">Architecture SaaS</span>
-            <span class="badge skill-badge me-2 mb-2">Intégration API</span>
-            <span class="badge skill-badge me-2 mb-2">SSO / SAML</span>
-            <span class="badge skill-badge me-2 mb-2">Mobile Stores (Apple/Google)</span>
-            <span class="badge skill-badge me-2 mb-2">SQL</span>
-            <span class="badge skill-badge me-2 mb-2">n8n / Automatisation</span>
-            <span class="badge skill-badge me-2 mb-2">Postman</span>
-            <!-- Ajouts Front & Infra -->
-            <span class="badge skill-badge me-2 mb-2">HTML5 / CSS3</span>
-            <span class="badge skill-badge me-2 mb-2">JavaScript (ES6+)</span>
-            <span class="badge skill-badge me-2 mb-2">DNS / SPF / DKIM</span>
-          </div>
-        </div>
-
-        <!-- Compétences Linguistiques -->
-        <div class="skill-category">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">
-              <i class="bi bi-translate"></i>
-            </div>
-            <div>
-              <h3 class="skill-category-title">Langues</h3>
-              <p class="skill-category-subtitle">International</p>
-            </div>
-          </div>
-          <div class="skill-items">
-            <span class="badge skill-badge me-2 mb-2">Français (Natif)</span>
-            <span class="badge skill-badge me-2 mb-2">Anglais Courant (C1)</span>
-            <span class="badge skill-badge me-2 mb-2">Espagnol (B2)</span>
-          </div>
+            <h3><a href="https://guerin-remi.github.io/quelpc/">MyPC <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></h3>
+            <p>Recommander un ordinateur à partir des usages, avec un questionnaire sans jargon.</p>
+          </article>
         </div>
       </div>
     </section>
 
+    <section id="parcours" class="container section-spacing" aria-labelledby="parcours-titre">
+      <h2 id="parcours-titre" class="section-title">Parcours</h2>
+      <div class="career-layout">
+        <section aria-labelledby="experiences-titre">
+          <h3 id="experiences-titre" class="career-heading">Expériences professionnelles</h3>
+          <ol class="career-timeline">
+            <li class="career-employer">
+              <h4>AlumnForce</h4>
+              <div class="career-role">
+                <p class="career-date">Depuis <time datetime="2025-12">décembre 2025</time></p>
+                <h5>Responsable de l’équipe Implémentation</h5>
+                <p>Pilotage de l’équipe, projets stratégiques et amélioration des méthodes de déploiement.</p>
+              </div>
+              <div class="career-role">
+                <p class="career-date"><time datetime="2023-05">Mai 2023</time> – <time datetime="2025-11">novembre 2025</time></p>
+                <h5>Chef de projet technique</h5>
+                <p>Déploiements SaaS de bout en bout et Product Ownership d’une application mobile déclinée pour une trentaine de clients.</p>
+              </div>
+            </li>
+            <li class="career-employer">
+              <h4>Dentsply Sirona</h4>
+              <div class="career-role">
+                <p class="career-date"><time datetime="2022">2022</time> – <time datetime="2023">2023</time> · Barcelone et Tours</p>
+                <h5>Support informatique</h5>
+                <p>Support trilingue et déploiement de postes avec SCCM.</p>
+              </div>
+            </li>
+            <li class="career-employer">
+              <h4>Indépendant</h4>
+              <div class="career-role">
+                <p class="career-date"><time datetime="2021-09">Septembre 2021</time> – <time datetime="2022-06">juin 2022</time></p>
+                <h5>Coordinateur de production vidéo</h5>
+                <p>Coordination des intervenants et des directs hebdomadaires sur YouTube.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <div class="career-education">
+          <section aria-labelledby="formation-titre">
+            <h3 id="formation-titre" class="career-heading">Formation</h3>
+            <p class="career-date"><time datetime="2019">2019</time> – <time datetime="2024">2024</time> · Angers</p>
+            <p class="career-school">ESAIP</p>
+            <p>Diplôme d’ingénieur en informatique et réseaux, option cybersécurité.</p>
+            <p class="career-exchange">Échanges universitaires à l’UCLM (Albacete) et à la BME (Budapest).</p>
+          </section>
+          <section aria-labelledby="certifications-titre">
+            <h3 id="certifications-titre" class="career-heading">Certifications et anglais</h3>
+            <dl class="career-credentials">
+              <div><dt>Azure AI Fundamentals</dt><dd>Microsoft · AI-900</dd></div>
+              <div><dt>Product Owner Professional Certification</dt><dd>Product Ownership</dd></div>
+              <div><dt>TOEIC 970/990</dt><dd>Anglais professionnel · Niveau C1</dd></div>
+            </dl>
+          </section>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Custom Scripts -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/animations.js"></script>
-  <script src="assets/js/modern.js"></script>
+  <footer id="contact" class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <h2>Parlons de votre prochain projet</h2>
+        <p>Vous recrutez un chef de projet technique ou vous avez un sujet de déploiement, d’intégration ou de produit à me soumettre ?</p>
+      </div>
+      <div class="hero-actions">
+        <a class="action action-primary" href="mailto:pro.rguerin@gmail.com">M’écrire <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        <a class="action action-secondary" href="https://www.linkedin.com/in/r%C3%A9mi-guerin/">Me contacter sur LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 </body>
-
 </html>

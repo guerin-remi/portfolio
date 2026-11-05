@@ -1,148 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Automatisation du Cycle Client – Rémi GUERIN</title>
-
-  <!-- Favicon -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relier les outils de suivi client — Rémi Guerin</title>
+  <meta name="description" content="J’ai construit des workflows pour relier les outils utilisés par l’équipe Implémentation, de l’ouverture d’un projet aux enquêtes de satisfaction.">
+  <meta name="theme-color" content="#fff7ed">
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 
-  <!-- Fonts: Space Grotesk & Plus Jakarta Sans -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Bootstrap 5 + Icons -->
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <!-- Custom Styles -->
+  <!-- Styles -->
   <link rel="stylesheet" href="../../assets/css/variables.css" />
   <link rel="stylesheet" href="../../assets/css/project-page.css" />
+  <link rel="stylesheet" href="../../assets/css/modern.css" />
 </head>
-
 <body>
-  <div class="container py-5">
-    <!-- Navigation retour -->
-    <div>
-      <a href="../../index.html#projects-section" class="back-link">
-        <i class="bi bi-arrow-left"></i> Retour au CV
-      </a>
-    </div>
-
-    <!-- Header du projet -->
-    <header class="project-header fade-in-up">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <h1 class="project-title">Automatisation Complète du Cycle Client</h1>
-          <p class="project-lead">Orchestration de 11 workflows interconnectés pour gérer l'onboarding, le support et le suivi projet.</p>
-          <div class="d-flex flex-wrap">
-            <span class="badge">n8n (11 Workflows)</span>
-            <span class="badge">JIRA Service Management</span>
-            <span class="badge">Google Sheets</span>
-            <span class="badge">Emailing</span>
-          </div>
-        </div>
-        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-          <span class="sidebar-label">Impact</span>
-          <span class="status-badge active">En Production</span>
-          <div class="text-muted small mt-2">Utilisé quotidiennement</div>
-        </div>
+  <a class="visually-hidden-focusable skip-link bg-white p-3" href="#contenu">Aller au contenu</a>
+  <header class="site-nav">
+    <div class="container site-nav-inner">
+      <a class="site-name" href="../../index.html#accueil">Rémi Guerin</a>
+      <div class="site-contacts" role="group" aria-label="Me contacter">
+        <a href="mailto:pro.rguerin@gmail.com" aria-label="E-mail : pro.rguerin@gmail.com">
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+          <span class="email-full">pro.rguerin@gmail.com</span><span class="email-short">E-mail</span>
+        </a>
+        <a href="https://www.linkedin.com/in/r%C3%A9mi-guerin/">
+          <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
       </div>
+      <nav class="site-nav-links" aria-label="Navigation principale">
+        <a href="../../index.html#projects-section">Réalisations</a>
+        <a href="../../index.html#projets-personnels">Projets perso</a>
+        <a href="../../index.html#parcours">Parcours</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu" class="container py-5">
+    <a class="back-link" href="../../index.html#projects-section"><span aria-hidden="true">←</span> Retour au portfolio</a>
+    <header class="project-header">
+      <p class="fw-semibold mb-2">Automatisation</p>
+      <h1 class="project-title">Relier les outils de suivi client</h1>
+      <p class="project-lead mb-0">J’ai construit des workflows pour relier les outils utilisés par l’équipe Implémentation, de l’ouverture d’un projet aux enquêtes de satisfaction.</p>
     </header>
 
-    <div class="row">
-      <!-- Colonne Principale -->
+    <div class="row g-4">
       <div class="col-lg-8">
-        
-        <!-- Section 1 -->
-        <section class="content-card fade-in-up" style="transition-delay: 100ms;">
-          <h2 class="content-title">Ce que j'ai mis en place</h2>
-          <p>
-            J'ai conçu un écosystème de <strong>11 workflows actifs sur n8n</strong> qui gèrent la vie du client de A à Z.
-          </p>
-          <p>
-            L'objectif n'était pas juste de "gagner du temps", mais de créer une expérience fluide où les outils (JIRA, CRM, Google Sheets) se parlent enfin entre eux sans que l'humain ait à faire le messager.
-          </p>
+        <figure class="project-visual">
+          <img src="../../assets/images/n8n.svg" width="620" height="340" alt="Flux n8n de la signature à l’e-mail d’accueil, en passant par la création du dossier et des documents">
+          <figcaption>Schéma simplifié de la préparation d’un dossier client.</figcaption>
+        </figure>
+        <section class="content-card">
+          <h2 class="content-title">Préparer chaque nouveau projet</h2>
+          <p>À la validation d’un nouveau client, les workflows créent les accès au support et les tickets de suivi. Les informations nécessaires sont synchronisées entre les outils utilisés par l’équipe.</p>
         </section>
-
-        <!-- Section 2 -->
-        <section class="content-card fade-in-up" style="transition-delay: 200ms;">
-          <h2 class="content-title">1. Onboarding Multi-Plateformes</h2>
-          <p>
-            Dès qu'un nouveau client est validé, le système démarre tout seul :
-          </p>
-          <ul>
-            <li><strong>Création simultanée :</strong> Il ouvre les comptes sur JIRA Support et sur notre plateforme communautaire (Club Alumnforce).</li>
-            <li><strong>Zéro oubli :</strong> Il génère automatiquement les tickets de suivi et les assigne aux bons chefs de projet.</li>
-            <li><strong>Cohérence :</strong> Il synchronise les données entre tous les systèmes pour éviter les doublons ou les erreurs de saisie.</li>
-          </ul>
+        <section class="content-card">
+          <h2 class="content-title">Envoyer les bons éléments au bon moment</h2>
+          <p>Les workflows envoient les ressources d’onboarding et les questionnaires de satisfaction. Ils vérifient la présence d’une réponse avant de déclencher une relance.</p>
         </section>
-
-        <!-- Section 3 -->
-        <section class="content-card fade-in-up" style="transition-delay: 300ms;">
-          <h2 class="content-title">2. Communication Intelligente</h2>
-          <p>
-            Les workflows ne font pas que copier des données, ils gèrent le timing de la relation client :
-          </p>
-          <ul>
-            <li>Envoi automatique des comptes-rendus et des documents techniques (DKIM, checklists) au bon moment.</li>
-            <li><strong>Boucle de satisfaction :</strong> Le système envoie un questionnaire, attend 7 jours, vérifie s'il est rempli, et relance gentiment si nécessaire. Tout ça sans intervention humaine.</li>
-          </ul>
+        <section class="content-card">
+          <h2 class="content-title">Faire remonter les blocages</h2>
+          <p>Des alertes signalent les tickets bloqués ou les délais qui dérivent. À la clôture d’un projet, l’automatisation transmet l’information à l’équipe concernée.</p>
         </section>
-
-        <!-- Section 4 -->
-        <section class="content-card fade-in-up" style="transition-delay: 400ms;">
-          <h2 class="content-title">3. Monitoring Proactif</h2>
-          <p>
-            Pour éviter les dérives, j'ai créé des robots de surveillance qui tournent en continu :
-          </p>
-          <ul>
-            <li>Ils alertent si un projet dépasse les délais prévus.</li>
-            <li>Ils signalent les tickets bloqués qui nécessitent une intervention.</li>
-            <li>Ils préviennent automatiquement la comptabilité quand un projet est terminé.</li>
-          </ul>
+        <section class="content-card">
+          <h2 class="content-title">Réduire la ressaisie</h2>
+          <p>Pour l’étape de préparation du dossier après signature, le temps est passé de 45 minutes à moins de 5 minutes. Une dizaine d’automatisations ont pris en charge les étapes récurrentes. Les chefs de projet disposent d’informations de suivi plus cohérentes pour décider où intervenir.</p>
         </section>
-
       </div>
-
-      <!-- Sidebar -->
-      <div class="col-lg-4">
-        <aside class="sidebar-card fade-in-up" style="transition-delay: 500ms;">
-          <h3 class="sidebar-title">Stack Technique</h3>
-          
-          <div class="sidebar-section">
-            <span class="sidebar-label">Cœur</span>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="badge">n8n</span>
-              <span class="badge">Webhooks</span>
-              <span class="badge">JSON</span>
-            </div>
-          </div>
-
-          <div class="sidebar-section">
-            <span class="sidebar-label">Connecteurs</span>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="badge">JIRA API</span>
-              <span class="badge">Google Sheets API</span>
-              <span class="badge">SMTP</span>
-            </div>
-          </div>
-
-          <div class="sidebar-section">
-            <span class="sidebar-label">Résultat</span>
-            <div>Zéro saisie manuelle & Suivi proactif</div>
-          </div>
-        </aside>
-      </div>
+      <aside class="col-lg-4" aria-labelledby="reperes">
+        <div class="sidebar-card">
+          <h2 id="reperes" class="sidebar-title">Repères</h2>
+          <dl>
+            <dt>Orchestration</dt>
+            <dd>n8n, webhooks, JSON</dd>
+            <dt>Outils reliés</dt>
+            <dd>CRM, Jira Service Management et Google Sheets</dd>
+            <dt>Périmètre</dt>
+            <dd>Onboarding, support, suivi des délais et satisfaction</dd>
+          </dl>
+        </div>
+      </aside>
     </div>
-  </div>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Custom Scripts -->
-  <script src="../../assets/js/animations.js"></script>
+    <div class="d-flex flex-wrap gap-2 mt-4">
+      <a class="back-link mb-0" href="deployments.html">Lire le cas déploiement <span aria-hidden="true">↗</span></a>
+      <a class="back-link mb-0" href="../../index.html#projets-personnels">Voir mes projets personnels <span aria-hidden="true">↗</span></a>
+    </div>
+  </main>
 </body>
 </html>

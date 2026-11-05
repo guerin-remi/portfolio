@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Déploiement Web & Mobile – Rémi GUERIN</title>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Déployer des plateformes web et mobile — Rémi Guerin</title>
+  <meta name="description" content="Je pilote des implémentations SaaS B2B de bout en bout, depuis le cadrage des besoins jusqu’à la prise en main de la plateforme par les équipes clientes.">
+  <meta name="theme-color" content="#fff7ed">
   <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
 
   <!-- Fonts -->
@@ -19,102 +20,79 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../../assets/css/variables.css" />
   <link rel="stylesheet" href="../../assets/css/project-page.css" />
+  <link rel="stylesheet" href="../../assets/css/modern.css" />
 </head>
-
 <body>
-  <div class="container py-5">
-    <div>
-      <a href="../../index.html#projects-section" class="back-link">
-        <i class="bi bi-arrow-left"></i> Retour au CV
-      </a>
-    </div>
-
-    <header class="project-header fade-in-up">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <h1 class="project-title">Déploiement Web & Mobile</h1>
-          <p class="project-lead">Pilotage de projets techniques pour des grands comptes (L'Oréal, HEC, Forvis Mazars, CentraleSupélec).</p>
-          <div class="d-flex flex-wrap">
-            <span class="badge">Web & Mobile</span>
-            <span class="badge">App Store Connect</span>
-            <span class="badge">Google Play</span>
-            <span class="badge">Consulting API</span>
-          </div>
-        </div>
-        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-          <span class="sidebar-label">Type</span>
-          <span class="status-badge active">Mission Grand Compte</span>
-          <div class="text-muted small mt-2">Enjeux critiques</div>
-        </div>
+  <a class="visually-hidden-focusable skip-link bg-white p-3" href="#contenu">Aller au contenu</a>
+  <header class="site-nav">
+    <div class="container site-nav-inner">
+      <a class="site-name" href="../../index.html#accueil">Rémi Guerin</a>
+      <div class="site-contacts" role="group" aria-label="Me contacter">
+        <a href="mailto:pro.rguerin@gmail.com" aria-label="E-mail : pro.rguerin@gmail.com">
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+          <span class="email-full">pro.rguerin@gmail.com</span><span class="email-short">E-mail</span>
+        </a>
+        <a href="https://www.linkedin.com/in/r%C3%A9mi-guerin/">
+          <i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
       </div>
+      <nav class="site-nav-links" aria-label="Navigation principale">
+        <a href="../../index.html#projects-section">Réalisations</a>
+        <a href="../../index.html#projets-personnels">Projets perso</a>
+        <a href="../../index.html#parcours">Parcours</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenu" class="container py-5">
+    <a class="back-link" href="../../index.html#projects-section"><span aria-hidden="true">←</span> Retour au portfolio</a>
+    <header class="project-header">
+      <p class="fw-semibold mb-2">Pilotage et intégration</p>
+      <h1 class="project-title">Déployer des plateformes web et mobile</h1>
+      <p class="project-lead mb-0">Je pilote des implémentations SaaS B2B de bout en bout, depuis le cadrage des besoins jusqu’à la prise en main de la plateforme par les équipes clientes.</p>
     </header>
 
-    <div class="row">
+    <div class="row g-4">
       <div class="col-lg-8">
-        <section class="content-card fade-in-up" style="transition-delay: 100ms;">
-          <h2 class="content-title">Ce que je fais</h2>
-          <p>
-            Je gère le déploiement de solutions logicielles pour des clients qui ont des milliers d'utilisateurs. L'enjeu, c'est que ça marche du premier coup, sans friction.
-          </p>
-          <p>
-            Mon travail se divise en deux parties :
-          </p>
-          <ul>
-            <li><strong>Le Web (Plateforme) :</strong> Je configure le logiciel, je sécurise l'accès (SSO) et je m'assure que les données circulent bien avec leur système d'information.</li>
-            <li><strong>Le Mobile (App) :</strong> Je m'occupe de publier leurs applications sur les stores Apple et Google.</li>
-          </ul>
+        <figure class="project-visual">
+          <img src="../../assets/images/deploiement.svg" width="620" height="340" alt="Le délai moyen de déploiement est passé de 7 à 5,5 mois">
+          <figcaption>Évolution du délai moyen de déploiement.</figcaption>
+        </figure>
+        <section class="content-card">
+          <h2 class="content-title">Cadrer le déploiement</h2>
+          <p>Je définis avec le client le périmètre, les jalons, les rôles et les critères de recette. J’anime les points de suivi et j’anticipe les dépendances entre les équipes métier, IT et produit.</p>
         </section>
-
-        <section class="content-card fade-in-up" style="transition-delay: 200ms;">
-          <h2 class="content-title">La partie Mobile (30+ Apps)</h2>
-          <p>
-            C'est souvent la partie la plus complexe pour les clients. Je gère pour eux une flotte d'une trentaine d'applications en marque blanche.
-          </p>
-          <ul>
-            <li>Je génère les fichiers d'installation (builds) et je gère les certificats de signature (qui sont un cauchemar administratif si on ne suit pas ça de près).</li>
-            <li>Je connais les règles de validation d'Apple par cœur, ce qui me permet de négocier et de débloquer des situations de refus pour que l'app soit validée.</li>
-          </ul>
+        <section class="content-card">
+          <h2 class="content-title">Intégrer la plateforme au SI</h2>
+          <p>J’accompagne la configuration du SSO (SAML ou OIDC) et les intégrations API. Je teste les appels avec Postman et j’analyse les flux et les logs pour qualifier les écarts avant la recette. Selon le projet, je coordonne aussi la reprise de données et les transferts SFTP.</p>
         </section>
-
-        <section class="content-card fade-in-up" style="transition-delay: 300ms;">
-          <h2 class="content-title">Résultats</h2>
-          <p>
-            J'ai assuré un taux de succès de 100% sur les mises en ligne. Les clients n'ont pas à se soucier de la complexité technique : ils ont juste leur application prête à être téléchargée par leurs utilisateurs.
-          </p>
+        <section class="content-card">
+          <h2 class="content-title">Déployer sur le web et le mobile</h2>
+          <p>Je coordonne la recette, la formation et la mise en production. Sur le mobile, j’ai accompagné la publication d’applications en marque blanche sur iOS et Android.</p>
+        </section>
+        <section class="content-card">
+          <h2 class="content-title">Structurer le travail de l’équipe</h2>
+          <p>J’ai créé des playbooks pour formaliser les étapes de déploiement et mis en place des automatisations internes pour les tâches récurrentes. Avec l’équipe, nous avons fait passer la part de projets standardisés de 55 % à 81 % et ramené le délai moyen de déploiement de 7 à 5,5 mois. La satisfaction sur l’accompagnement et la gestion de projet s’est maintenue à 9,2/10.</p>
         </section>
       </div>
-
-      <div class="col-lg-4">
-        <aside class="sidebar-card fade-in-up" style="transition-delay: 400ms;">
-          <h3 class="sidebar-title">Compétences clés</h3>
-          
-          <div class="sidebar-section">
-            <span class="sidebar-label">Mobile</span>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="badge">App Store Connect</span>
-              <span class="badge">Google Play Console</span>
-              <span class="badge">TestFlight</span>
-            </div>
-          </div>
-
-          <div class="sidebar-section">
-            <span class="sidebar-label">Web</span>
-            <div class="d-flex flex-wrap gap-1">
-              <span class="badge">SSO / SAML</span>
-              <span class="badge">API REST</span>
-            </div>
-          </div>
-
-          <div class="sidebar-section">
-            <span class="sidebar-label">Volume</span>
-            <div>30+ Apps / 5000+ Utilisateurs</div>
-          </div>
-        </aside>
-      </div>
+      <aside class="col-lg-4" aria-labelledby="reperes">
+        <div class="sidebar-card">
+          <h2 id="reperes" class="sidebar-title">Repères</h2>
+          <dl>
+            <dt>Périmètre</dt>
+            <dd>Plus de 50 clients accompagnés, dont des grands comptes, de grandes écoles et des acteurs publics</dd>
+            <dt>Intégrations</dt>
+            <dd>API REST, SSO, SAML, OIDC, SFTP, JSON, XML et SQL</dd>
+            <dt>Mobile</dt>
+            <dd>App Store Connect, Google Play Console et TestFlight</dd>
+          </dl>
+        </div>
+      </aside>
     </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../../assets/js/animations.js"></script>
+    <div class="d-flex flex-wrap gap-2 mt-4">
+      <a class="back-link mb-0" href="automation.html">Lire le cas automatisation <span aria-hidden="true">↗</span></a>
+      <a class="back-link mb-0" href="produit.html">Lire ma vision produit <span aria-hidden="true">↗</span></a>
+    </div>
+  </main>
 </body>
 </html>
