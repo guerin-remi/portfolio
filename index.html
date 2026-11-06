@@ -66,13 +66,14 @@
           <div class="hero-accent-bar" aria-hidden="true"></div>
           <p id="about" class="hero-subtitle">Je fais le lien entre la promesse commerciale et la réalité technique. Avec les équipes métier et IT, je pilote les intégrations, la recette et l’adoption.</p>
           <div class="hero-actions">
-            <a href="mailto:pro.rguerin@gmail.com" class="action action-primary">M’écrire <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
-            <a href="assets/CV_Remi_GUERIN.pdf" download class="action action-secondary">Télécharger mon CV <i class="bi bi-download" aria-hidden="true"></i></a>
+            <a href="assets/CV_Remi_GUERIN.pdf" download class="action action-primary">Télécharger mon CV <i class="bi bi-download" aria-hidden="true"></i></a>
+            <a href="mailto:pro.rguerin@gmail.com" class="action action-secondary">M’écrire <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
           </div>
-          <div class="hero-references">
-            <p>Parmi les équipes accompagnées</p>
-            <div><strong>Grands comptes</strong><strong>Grandes écoles</strong><strong>Acteurs publics</strong></div>
-          </div>
+          <dl class="hero-credentials">
+            <div><dt>Parcours</dt><dd>Chef de projet, puis lead d’équipe</dd></div>
+            <div><dt>Formation</dt><dd>Ingénieur informatique</dd></div>
+            <div><dt>Anglais</dt><dd>TOEIC 970/990</dd></div>
+          </dl>
         </div>
         <img src="assets/portrait-remi.webp" width="685" height="850" fetchpriority="high" alt="Portrait de Rémi Guerin" class="hero-photo">
       </div>
@@ -80,6 +81,16 @@
 
     <section class="delivery-results" aria-labelledby="resultats-titre">
       <div class="container">
+        <div class="client-types">
+          <h2 id="clients-titre">Ils m’ont confié leurs projets</h2>
+          <ul aria-labelledby="clients-titre">
+            <li><i class="bi bi-buildings" aria-hidden="true"></i> Groupes du CAC 40</li>
+            <li><i class="bi bi-bank" aria-hidden="true"></i> Ministères</li>
+            <li><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Institution européenne</li>
+            <li><i class="bi bi-mortarboard" aria-hidden="true"></i> Universités du top 5 français</li>
+            <li><i class="bi bi-award" aria-hidden="true"></i> Grandes écoles</li>
+          </ul>
+        </div>
         <h2 id="resultats-titre">Résultats de terrain</h2>
         <dl>
           <div><dt>Clients accompagnés</dt><dd>50+</dd></div>
@@ -91,7 +102,7 @@
     </section>
 
     <section id="services" class="container section-spacing" aria-labelledby="services-titre">
-      <h2 id="services-titre" class="section-title">Ce que je peux faire pour vous</h2>
+      <h2 id="services-titre" class="section-title">Ce que j’apporte</h2>
       <div class="service-grid">
         <article>
           <i class="bi bi-kanban" aria-hidden="true"></i>
@@ -110,15 +121,36 @@
         </article>
         <article>
           <i class="bi bi-arrow-repeat" aria-hidden="true"></i>
-          <h3>Automatiser vos opérations avec n8n</h3>
-          <p>Relier le CRM, Jira et les outils de suivi pour éviter les ressaisies, déclencher les relances et signaler les blocages.</p>
+          <h3>Simplifier et automatiser les process</h3>
+          <p>Relier le CRM et Jira avec n8n, et outiller l’équipe avec des agents IA qui prennent en charge les tâches récurrentes.</p>
         </article>
       </div>
     </section>
 
     <section id="projects-section" class="case-band" aria-labelledby="cas-titre">
       <div class="container section-spacing">
-        <h2 id="cas-titre" class="section-title">Trois cas concrets</h2>
+        <h2 id="cas-titre" class="section-title">Réalisations</h2>
+        <article class="case-feature">
+          <div class="case-feature-main">
+            <p class="case-tag"><i class="bi bi-stars" aria-hidden="true"></i> Agents IA · Process</p>
+            <h3><a href="pages/projects/kit-ia.html">Outiller l’équipe avec un kit d’agents IA</a></h3>
+            <p>J’ai conçu un agent IA installé sur le poste de chaque chef de projet. Il connaît les étapes d’un déploiement, réalise lui-même les tâches techniques récurrentes et tient à jour le suivi de chaque client.</p>
+            <p class="case-result"><strong>34</strong><span>compétences métier, réparties en 9 modules et installées en un seul prompt</span></p>
+            <span class="case-more" aria-hidden="true">Lire le cas <i class="bi bi-arrow-right"></i></span>
+          </div>
+          <div class="case-feature-side">
+            <p>Ce que l’agent prend en charge</p>
+            <ul>
+              <li><i class="bi bi-database" aria-hidden="true"></i> Imports et reprise de données</li>
+              <li><i class="bi bi-envelope-check" aria-hidden="true"></i> DNS et délivrabilité des e-mails</li>
+              <li><i class="bi bi-shield-lock" aria-hidden="true"></i> Connexion SSO</li>
+              <li><i class="bi bi-phone" aria-hidden="true"></i> Apps mobiles et stores</li>
+              <li><i class="bi bi-palette" aria-hidden="true"></i> Pages d’accueil et CSS</li>
+              <li><i class="bi bi-plug" aria-hidden="true"></i> API et paiement en ligne</li>
+              <li><i class="bi bi-kanban" aria-hidden="true"></i> Suivi client, Jira et comptes rendus</li>
+            </ul>
+          </div>
+        </article>
         <div class="case-list">
           <article class="case-card">
             <p class="case-tag"><i class="bi bi-kanban" aria-hidden="true"></i> Déploiement SaaS</p>
@@ -132,7 +164,7 @@
             <p class="case-tag"><i class="bi bi-phone" aria-hidden="true"></i> Apps mobiles</p>
             <h3><a href="pages/projects/mobile.html">Publier des apps en marque blanche</a></h3>
             <p>Un même produit décliné pour chaque client&nbsp;: j’ai coordonné les tests, la signature et les soumissions à l’App Store et à Google Play.</p>
-            <p class="case-result"><strong>30+</strong><span>apps clientes publiées, plusieurs dizaines de milliers de téléchargements cumulés</span></p>
+            <p class="case-result"><strong>50&nbsp;000+</strong><span>téléchargements cumulés sur plus de 30 apps clientes</span></p>
             <span class="case-more" aria-hidden="true">Lire le cas <i class="bi bi-arrow-right"></i></span>
           </article>
 
@@ -193,7 +225,7 @@
               <div class="career-role">
                 <p class="career-date">Depuis <time datetime="2025-12">décembre 2025</time></p>
                 <h5>Responsable de l’équipe Implémentation</h5>
-                <p>Pilotage de l’équipe, projets stratégiques et amélioration des méthodes de déploiement.</p>
+                <p>Lead de l’équipe&nbsp;: accompagnement des chefs de projet, projets stratégiques, simplification des process et outillage de l’équipe.</p>
               </div>
               <div class="career-role">
                 <p class="career-date"><time datetime="2023-05">Mai 2023</time> – <time datetime="2025-11">novembre 2025</time></p>
@@ -244,8 +276,8 @@
   <footer id="contact" class="site-footer">
     <div class="container footer-content">
       <div>
-        <h2>Parlons de votre prochain projet</h2>
-        <p>Vous recrutez un chef de projet technique ou vous avez un sujet de déploiement, d’intégration ou de produit à me soumettre ?</p>
+        <h2>Un poste ou un projet à me proposer&nbsp;?</h2>
+        <p>Pilotage de déploiement, intégration, produit mobile ou automatisation&nbsp;: écrivez-moi, je réponds rapidement.</p>
       </div>
       <div class="hero-actions">
         <a class="action action-primary" href="mailto:pro.rguerin@gmail.com">M’écrire <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
